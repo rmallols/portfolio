@@ -1,0 +1,53 @@
+@import './Home/Home.scss';
+@import './AboutMe/AboutMe.scss';
+
+.App {
+
+    .AnimatedRoute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+
+        > * { //Animation layer
+
+            > * { //View root layer
+                $padding: 30px;
+                height: 100vh;
+                background-color: transparentize($charade-color, 0.03);
+                padding: $header-height $padding $padding $padding;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .is-text-center {
+        text-align: center;
+    }
+
+    .is-text-right {
+        text-align: right;
+    }
+
+    .is-color-red {
+        color: $red-color;
+    }
+
+    .is-color-yellow {
+        color: $yellow-color;
+    }
+
+    .is-color-green {
+        color: $green-color;
+    }
+}

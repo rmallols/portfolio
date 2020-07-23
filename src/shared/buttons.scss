@@ -1,0 +1,17 @@
+button,
+.button {
+    background-color: transparent;
+    color: white;
+    padding: 30px 60px;
+    border: 1px solid $cyan-color;
+    color: $cyan-color;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        transition: background-color $animation-type $animation-duration;
+        background-color: $cyan-color;
+        color: $charade-color;
+    }
+}

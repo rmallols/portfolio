@@ -1,0 +1,37 @@
+.Menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: auto;
+    display: flex;
+    z-index: 1;
+
+    a {
+        $padding: 25px;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 30px $padding;
+
+        &:last-child {
+            padding-right: 2 * $padding;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            width: 100%;
+            height: 5px;
+        }
+
+        &.is-active {
+
+            &:after {
+                background-color: $pink-color;
+            }
+        }
+    }
+}

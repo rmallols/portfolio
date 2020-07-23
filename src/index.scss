@@ -1,0 +1,47 @@
+@import './shared/variables.scss';
+@import './shared/buttons.scss';
+@import './shared/Menu/Menu.scss';
+@import './shared/Code/Code.scss';
+@import './shared/Footer/Footer.scss';
+@import './App.scss';
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: titillium;
+    color: white;
+    font-size: 20px;
+}
+
+body {
+    background-color: transparentize($charade-color, 0.03);
+}
+
+a {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: titillium;
+    src: url(./TitilliumWeb-Regular.ttf);
+}
+
+@mixin heading($font-size) {
+    font-size: $font-size;
+    margin: 0;
+    // line-height: 1;
+}
+
+h1 { @include heading(6rem); }
+h2 { @include heading(5rem); }
+h3 { @include heading(4rem); }
+h4 { @include heading(3rem); }
+h5 { @include heading(2rem); }
+h6 { @include heading(1.25rem); }
