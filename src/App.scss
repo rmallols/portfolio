@@ -1,6 +1,7 @@
 @import './Home/Home.scss';
 @import './AboutMe/AboutMe.scss';
 @import './Skills/Skills.scss';
+@import './Experience/Experience.scss';
 
 .App {
 
@@ -26,9 +27,5 @@
 
     .is-color-cyan {
         color: $cyan-color;
-    }
-
-    .no-margin {
-        margin: 0;
     }
 }

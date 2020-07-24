@@ -1,0 +1,53 @@
+@import './ExperienceKodiriLogo/ExperienceKodiriLogo.scss';
+
+.Experience {
+
+    main {
+
+        .companiesWrapper {
+            display: grid;
+            grid-gap: 50px;
+            align-self: center;
+            overflow: auto;
+            max-height: $available-height;
+
+            .ExperienceCompany {
+                display: grid;
+                grid-template-columns: 400px 1fr;
+        
+                .details {
+                    display: grid;
+                    grid-gap: 15px;
+        
+                    .position {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+
+                    p {
+                        margin: 5px 0;
+                        line-height: 1.5;
+
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .logo {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+
+                    &.logo_hsbc         { background-image: url('./logos/hsbc.svg'); }
+                    &.logo_sky          { background-image: url('./logos/sky.svg'); }
+                    &.logo_edorasware   { background-image: url('./logos/edorasware.svg'); }
+                    &.logo_mimacom      { background-image: url('./logos/mimacom.svg'); }
+                }
+            }
+        }
+    }
+}

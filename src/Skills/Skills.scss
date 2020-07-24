@@ -1,14 +1,9 @@
+@import './SkillsText/SkillsText.scss';
+
 .Skills {
 
-    .content {
-        display: grid;
+    main {
         grid-template-columns: 1fr 1fr;
         grid-gap: 60px;
-    }
-
-    .text {
-        align-self: center;
-        overflow: auto;
-        max-height: $available-height;
     }
 }

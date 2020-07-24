@@ -1,0 +1,46 @@
+.ExperienceKodiriLogo {
+    position: relative;
+    height: 100%;
+
+    @mixin show($delay) {
+        animation-delay: $delay;
+        opacity: 0;
+        transform: scale(0.1);
+
+        @keyframes show {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .content {
+        height: 100%;
+        position: relative;
+        display: contents;
+
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            will-change: opacity, transform;
+            animation-name: show;
+            animation-duration: $animation-duration;
+            animation-fill-mode: forwards;
+
+            &.icon_pentagon1 { @include show(0.5s); }
+            &.icon_pentagon2 { @include show(0.75s); }
+            &.icon_pentagon3 { @include show(1s); }
+        }
+    }
+
+    .icon_pentagon1 { background-image: url('./icons/pentagon1.svg'); }
+    .icon_pentagon2 { background-image: url('./icons/pentagon2.svg'); }
+    .icon_pentagon3 { background-image: url('./icons/pentagon3.svg'); }
+}
