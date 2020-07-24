@@ -9,4 +9,6 @@ $purple-color: #bd93f9;
 $animation-type: ease;
 $animation-duration: .3s;
 
-$header-height: 90px;
+$header-height: 100px;
+$footer-height: 120px;
+$available-height: calc(100vh - #{$header-height + $footer-height});

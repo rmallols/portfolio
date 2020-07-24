@@ -1,23 +1,18 @@
 .Home {
-    border: 1px solid transparent;
-    display: grid;
-    align-content: center;
 
     &:after {
         background-image: url('./Home.jpeg');
     }
 
     main {
-        display: grid;
         grid-template-columns: 3fr 4fr;
         align-content: center;
-        grid-gap: 120px;
-        margin-bottom: 60px;
+        grid-gap: 90px;
     }
 
     .welcome {
         display: grid;
-        grid-gap: 82px;
+        grid-gap: 80px;
         justify-content: right;
     }
 

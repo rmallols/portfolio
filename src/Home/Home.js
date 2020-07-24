@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="welcome is-text-right">
                     <h1 className="title animate__animated animate__bounceInDown">
                         Hi!
-                </h1>
+                    </h1>
                     <h5 className="animate__animated animate__bounceInUp">
                         I'm a <label className="is-color-red">passionate</label><br />
                     full-stack <label className="is-color-yellow">JavaScript</label> dev<br />

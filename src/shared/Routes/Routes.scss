@@ -9,8 +9,9 @@
         > * { //View root layer
             $padding: 30px;
             height: 100vh;
+            overflow-y: auto;
             background-color: transparentize($charade-color, 0.03);
-            padding: $header-height $padding $padding $padding;
+            padding: $header-height $padding 0 $padding;
 
             &:after {
                 content: '';

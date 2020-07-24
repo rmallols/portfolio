@@ -1,3 +1,4 @@
+@import './shared/mixins.scss';
 @import './shared/variables.scss';
 @import './shared/buttons.scss';
 @import './shared/Menu/Menu.scss';
@@ -25,6 +26,13 @@ body {
     background-color: transparentize($charade-color, 0.03);
 }
 
+main {
+    display: grid;
+    align-content: center;
+    overflow: auto;
+    height: $available-height;
+}
+
 a {
     cursor: pointer;
 }
@@ -32,12 +40,6 @@ a {
 @font-face {
     font-family: titillium;
     src: url(./TitilliumWeb-Regular.ttf);
-}
-
-@mixin heading($font-size) {
-    font-size: $font-size;
-    margin: 0;
-    // line-height: 1;
 }
 
 h1 { @include heading(6rem); }

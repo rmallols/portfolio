@@ -1,5 +1,6 @@
 @import './Home/Home.scss';
 @import './AboutMe/AboutMe.scss';
+@import './Skills/Skills.scss';
 
 .App {
 
@@ -21,5 +22,13 @@
 
     .is-color-green {
         color: $green-color;
+    }
+
+    .is-color-cyan {
+        color: $cyan-color;
+    }
+
+    .no-margin {
+        margin: 0;
     }
 }
