@@ -13,18 +13,29 @@
             padding: $header-height $padding 0 $padding;
 
             &:before {
+                $line-left: 125px;
+                $line-width: 3px;
                 @include overlay(-1);
                 background-color: transparentize($charade-color, 0.03);
                 top: auto;
                 bottom: 100%;
+                width: $line-width;
+                left: $line-left;
                 animation-name: show-overlay;
                 animation-fill-mode: forwards;
                 animation-duration: $animation-duration;
                 animation-delay: 1s;
 
                 @keyframes show-overlay {
-                    // from { top: 100%; }
-                    to { bottom: 0%; }
+                    50% {
+                        left: $line-left;
+                        width: $line-width;
+                    }
+                    100% {
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                    }
                 }
             }
 
@@ -34,7 +45,6 @@
 
             > * { //content layer
                 animation-name: show-content;
-                // animation-type: $animation-type;
                 animation-duration: $animation-duration;
                 animation-fill-mode: forwards;
                 opacity: 0;

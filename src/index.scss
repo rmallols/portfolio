@@ -28,7 +28,6 @@ body {
 
 main {
     display: grid;
-    align-content: center;
     overflow: auto;
     height: $available-height;
     margin: 0 auto;
@@ -55,3 +54,10 @@ h3 { @include heading(4rem); }
 h4 { @include heading(3rem); }
 h5 { @include heading(2rem); }
 h6 { @include heading(1.25rem); }
+
+@media (min-width: $tablet-width) {
+
+    main {
+        align-content: center;
+    }
+}

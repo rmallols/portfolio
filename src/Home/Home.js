@@ -23,7 +23,7 @@ export default function Home() {
 });`);
     return (
         <>
-            <div className="welcome is-text-right">
+            <div className="welcome">
                 <h1 className="title animate__animated animate__bounceInDown">
                     Hi!
                     </h1>

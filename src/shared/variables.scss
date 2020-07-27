@@ -13,3 +13,6 @@ $header-height: 100px;
 $footer-height: 120px;
 $max-text-width: 900px;
 $available-height: calc(100vh - #{$header-height + $footer-height});
+
+$mobile-width: 650px;
+$tablet-width: 1200px;

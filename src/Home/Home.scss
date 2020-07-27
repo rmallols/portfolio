@@ -5,15 +5,16 @@
     }
 
     main {
-        grid-template-columns: 3fr 4fr;
+        grid-template-columns: 1fr;
         align-content: center;
-        grid-gap: 90px;
+        grid-gap: 45px;
     }
 
     .welcome {
         display: grid;
-        grid-gap: 145px;
-        justify-content: right;
+        text-align: center;
+        align-content: center;
+        grid-gap: 45px;
     }
 
     .title {
@@ -21,7 +22,32 @@
     }
 
     .codeWrapper {
-        display: grid;
+        display: none;
         align-items: center;
+    }
+
+    .Code {
+        grid-area: Code;
+    }
+
+    @media (min-width: $mobile-width) {
+
+        .codeWrapper {
+            display: grid;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+
+        main {
+            grid-template-columns: 3fr 4fr;
+            justify-content: right;
+            grid-gap: 90px;
+        }
+        
+        .welcome {
+            grid-gap: 145px;
+            text-align: right;
+        }
     }
 }
