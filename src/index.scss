@@ -12,6 +12,11 @@
     line-height: 1;
 }
 
+@font-face {
+    font-family: titillium;
+    src: url(./TitilliumWeb-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -50,17 +55,16 @@ p {
     &:last-of-type { margin-bottom: 0; }
 }
 
-@font-face {
-    font-family: titillium;
-    src: url(./TitilliumWeb-Regular.ttf);
-}
-
 h1 { @include heading(6rem); }
 h2 { @include heading(5rem); }
 h3 { @include heading(4rem); }
 h4 { @include heading(3rem); }
 h5 { @include heading(2rem); }
 h6 { @include heading(1.25rem); }
+
+iframe {
+    border: none;
+}
 
 @media (min-width: $mobile-width) {
 
