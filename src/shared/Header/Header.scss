@@ -1,0 +1,15 @@
+@import './HeaderLogo/HeaderLogo.scss';
+@import './HeaderMenu/HeaderMenu.scss';
+
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: auto;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}

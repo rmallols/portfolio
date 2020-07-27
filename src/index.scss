@@ -1,7 +1,7 @@
 @import './shared/mixins.scss';
 @import './shared/variables.scss';
 @import './shared/buttons.scss';
-@import './shared/Menu/Menu.scss';
+@import './shared/Header/Header.scss';
 @import './shared/Routes/Routes.scss';
 @import './shared/Code/Code.scss';
 @import './shared/Footer/Footer.scss';
@@ -31,10 +31,17 @@ main {
     align-content: center;
     overflow: auto;
     height: $available-height;
+    margin: 0 auto;
 }
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: white;
+
+    > * {
+        cursor: pointer;
+    }
 }
 
 @font-face {

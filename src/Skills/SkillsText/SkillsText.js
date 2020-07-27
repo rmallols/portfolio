@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SkillsText() {
     return (
-        <div className="SkillsText">
+        <div className="SkillsText is-text">
             <p>
                 <label className="is-color-red">I love JavaScript!</label><br />
                 I've been using it commercially for 15+ years,

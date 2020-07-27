@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatedRoute } from 'react-router-transition';
 import { useHistory } from 'react-router-dom';
-import Home from '../../Home/Home';
-import AboutMe from '../../AboutMe/AboutMe';
-import Skills from '../../Skills/Skills';
-import Experience from '../../Experience/Experience';
+import routes from './routes-list';
+import Footer from '../Footer/Footer';
 
 export default function Routes() {
 
-    const routes = [
-        { path: '/', component: Home },
-        { path: '/about-me', component: AboutMe },
-        { path: '/skills', component: Skills },
-        { path: '/experience', component: Experience },
-    ];
     const getCurrentRouteIndex = () => (
-        routes.findIndex(({ path }) => path === window.location.pathname)
+        routes.findIndex(({ to }) => to === window.location.pathname)
     );
     const history = useHistory();
     const animationOffset = 100;
@@ -46,12 +38,17 @@ export default function Routes() {
 
     return (
         <div className="Routes">{
-            routes.map(({ path, component }, index) => (
+            routes.map(({ to, text, component, isExternal }, index) => (
                 <AnimatedRoute
-                    key={path}
-                    path={path}
+                    key={to}
+                    path={to}
                     exact
-                    component={component}
+                    render={() => (
+                        <div className={component.name}>
+                            <main>{component()}</main>
+                            <Footer {...routes[index + 1]} />
+                        </div>
+                    )}
                     className="AnimatedRoute"
                     atEnter={{ offset: animationOffset }}
                     atLeave={{ offset: -animationOffset }}

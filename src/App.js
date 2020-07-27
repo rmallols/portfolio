@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'animate.css';
-import Menu from './shared/Menu/Menu';
+import Header from './shared/Header/Header';
 import Routes from './shared/Routes/Routes';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Menu />
+                <Header />
                 <Routes />
             </Router>
         </div>

@@ -11,4 +11,5 @@ $animation-duration: .3s;
 
 $header-height: 100px;
 $footer-height: 120px;
+$max-text-width: 900px;
 $available-height: calc(100vh - #{$header-height + $footer-height});

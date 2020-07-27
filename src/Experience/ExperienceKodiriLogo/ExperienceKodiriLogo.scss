@@ -34,9 +34,9 @@
             animation-duration: $animation-duration;
             animation-fill-mode: forwards;
 
-            &.icon_pentagon1 { @include show(0.5s); }
-            &.icon_pentagon2 { @include show(0.75s); }
-            &.icon_pentagon3 { @include show(1s); }
+            &.icon_pentagon1 { @include show(1.5s); }
+            &.icon_pentagon2 { @include show(1.75s); }
+            &.icon_pentagon3 { @include show(2s); }
         }
     }
 

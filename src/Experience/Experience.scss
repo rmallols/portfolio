@@ -1,19 +1,24 @@
 @import './ExperienceKodiriLogo/ExperienceKodiriLogo.scss';
 
 .Experience {
+    $logo-width: 400px;
+
+    &:after {
+        background-image: url('./Experience.jpg');
+    }
 
     main {
+        align-content: flex-start;
 
         .companiesWrapper {
+            max-width: $logo-width + $max-text-width;
+            margin: 0 auto;
             display: grid;
             grid-gap: 50px;
-            align-self: center;
-            overflow: auto;
-            max-height: $available-height;
 
             .ExperienceCompany {
                 display: grid;
-                grid-template-columns: 400px 1fr;
+                grid-template-columns: $logo-width 1fr;
         
                 .details {
                     display: grid;
@@ -44,8 +49,11 @@
 
                     &.logo_hsbc         { background-image: url('./logos/hsbc.svg'); }
                     &.logo_sky          { background-image: url('./logos/sky.svg'); }
-                    &.logo_edorasware   { background-image: url('./logos/edorasware.svg'); }
+                    &.logo_flowable     { background-image: url('./logos/flowable.svg'); }
                     &.logo_mimacom      { background-image: url('./logos/mimacom.svg'); }
+                    &.logo_palluc       { background-image: url('./logos/palluc.svg'); }
+                    &.logo_ever         { background-image: url('./logos/ever.svg'); }
+                    &.logo_vtt          { background-image: url('./logos/vtt.svg'); }
                 }
             }
         }

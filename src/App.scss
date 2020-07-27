@@ -2,8 +2,13 @@
 @import './AboutMe/AboutMe.scss';
 @import './Skills/Skills.scss';
 @import './Experience/Experience.scss';
+@import './Community/Community.scss';
 
 .App {
+
+    .is-text {
+        max-width: $max-text-width;
+    }
 
     .is-text-center {
         text-align: center;

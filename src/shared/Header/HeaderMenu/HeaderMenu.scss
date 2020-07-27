@@ -1,21 +1,15 @@
-.Menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: auto;
+.HeaderMenu {
     display: flex;
-    z-index: 1;
 
     a {
-        $padding: 25px;
         position: relative;
         color: white;
         text-decoration: none;
         display: block;
-        padding: 30px $padding;
+        padding: 30px 25px;
 
         &:last-child {
-            padding-right: 2 * $padding;
+            padding-right: 0;
         }
 
         &:after {

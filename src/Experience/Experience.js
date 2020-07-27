@@ -1,32 +1,26 @@
 import React from 'react';
 import experienceList from './experience-list';
-import Footer from '../shared/Footer/Footer';
 
 export default function Experience() {
     return (
-        <div className="Experience">
-            <main>
-                <div className="companiesWrapper">{
-                    experienceList.map(experience => (
-                        <ExperienceCompany
-                            {...experience}
-                            key={experience.company}
-                            details={
-                                <>{
-                                    experience.details
-                                        .map((paragraph, index) => (
-                                            <p key={index}>
-                                                {paragraph}
-                                            </p>
-                                        ))
-                                }</>
-                            }
-                        />
-                    ))
-                }</div>
-            </main>
-            <Footer text="Community" path="community" />
-        </div>
+        <div className="companiesWrapper">{
+            experienceList.map(experience => (
+                <ExperienceCompany
+                    {...experience}
+                    key={experience.company}
+                    details={
+                        <>{
+                            experience.details
+                                .map((paragraph, index) => (
+                                    <p key={index}>
+                                        {paragraph}
+                                    </p>
+                                ))
+                        }</>
+                    }
+                />
+            ))
+        }</div>
     );
 }
 
