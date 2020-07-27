@@ -1,5 +1,8 @@
 .SkillsText {
     align-self: center;
     overflow: auto;
-    max-height: $available-height;
+
+    @media (min-width: $mobile-width) {
+        max-height: $available-height;
+    }
 }

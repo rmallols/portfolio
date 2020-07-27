@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import 'animate.css';
 import Header from './shared/Header/Header';
 import Routes from './shared/Routes/Routes';
+import 'animate.css';
 
 function App() {
+
+    const setViewHeight = () => {
+        //This is necessary to prevent from having issues on mobile web
+        //because of its (potentially) floating address bar
+        const vh = window.innerHeight;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    useEffect(() => {
+        setViewHeight();
+        window.addEventListener('resize', setViewHeight);
+    }, []);
 
     return (
         <div className="App">

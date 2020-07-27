@@ -10,9 +10,16 @@ $animation-type: ease;
 $animation-duration: .3s;
 
 $header-height: 100px;
+$header-height_mobile: 70px;
 $footer-height: 120px;
 $max-text-width: 900px;
-$available-height: calc(100vh - #{$header-height + $footer-height});
+
+//This is necessary to prevent from having issues on mobile web
+//because of its (potentially) floating address bar
+$available-height: calc(#{var(--vh, 1vh)} - #{$header-height + $footer-height});
+$available-height_mobile: calc(#{var(--vh, 1vh)} - #{$header-height_mobile});
+
+$image-height_mobile: calc(100vw * 0.6);
 
 $mobile-width: 650px;
 $tablet-width: 1200px;

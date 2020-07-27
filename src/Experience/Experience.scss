@@ -1,7 +1,6 @@
 @import './ExperienceKodiriLogo/ExperienceKodiriLogo.scss';
 
 .Experience {
-    $logo-width: 400px;
 
     &:after {
         background-image: url('./Experience.jpg');
@@ -10,15 +9,17 @@
     main {
         align-content: flex-start;
 
-        .companiesWrapper {
-            max-width: $logo-width + $max-text-width;
+        .companiesWrapper {            
             margin: 0 auto;
             display: grid;
-            grid-gap: 50px;
 
             .ExperienceCompany {
                 display: grid;
-                grid-template-columns: $logo-width 1fr;
+                grid-template-columns: 1fr;
+
+                .logoWrapper {
+                    height: $image-height_mobile;
+                }
         
                 .details {
                     display: grid;
@@ -26,7 +27,7 @@
         
                     .position {
                         display: grid;
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-gap: 15px;
                     }
 
                     p {
@@ -54,6 +55,33 @@
                     &.logo_palluc       { background-image: url('./logos/palluc.svg'); }
                     &.logo_ever         { background-image: url('./logos/ever.svg'); }
                     &.logo_vtt          { background-image: url('./logos/vtt.svg'); }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        $logo-width: 400px;
+
+        main {
+
+            .companiesWrapper {
+                max-width: $logo-width + $max-text-width;
+                grid-gap: 50px;
+
+                .ExperienceCompany {
+                    grid-template-columns: $logo-width 1fr;
+
+                    .logoWrapper {
+                        height: auto;
+                    }
+
+                    .details {
+
+                        .position {
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
                 }
             }
         }

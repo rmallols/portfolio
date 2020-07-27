@@ -5,12 +5,12 @@ import Experience from '../../Experience/Experience';
 import Community from '../../Community/Community';
 
 const routes = [
-    { to: '/', text: 'Home', component: Home },
-    { to: '/about-me', text: 'About me', component: AboutMe },
-    { to: '/skills', text: 'Skills', component: Skills },
-    { to: '/experience', text: 'Experience', component: Experience },
-    { to: '/community', text: 'Community', component: Community },
-    { to: 'mailto:ricardo.mallols@gmail.com', text: 'Contact me', isExternal: true },
+    { id: 'home', to: '/', text: 'Home', component: Home },
+    { id: 'about-me', to: '/about-me', text: 'About me', component: AboutMe },
+    { id: 'skills', to: '/skills', text: 'Skills', component: Skills },
+    { id: 'experience', to: '/experience', text: 'Experience', component: Experience },
+    { id: 'community', to: '/community', text: 'Community', component: Community },
+    { id: 'contact-me', to: 'mailto:ricardo.mallols@gmail.com', text: 'Contact me', isExternal: true },
 ];
 
 export default routes;

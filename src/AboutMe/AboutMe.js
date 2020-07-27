@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMe() {
     return (
-        <>
+        <div className="is-text">
             <p>
                 I'm a <label className="is-color-red">Software Enginner with 18 years of programming experience</label>. I’m a highly proficient Javascript
                 / React / Angular developer, interested on standards,
@@ -28,6 +28,6 @@ export default function AboutMe() {
                 ng-book2 and SMACSS (Scalable and Modular
                 Architecture for CSS).
             </p>
-        </>
+        </div>
     );
 }

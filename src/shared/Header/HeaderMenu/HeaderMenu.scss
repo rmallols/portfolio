@@ -1,5 +1,22 @@
+@import './HeaderMenuNav/HeaderMenuNav.scss';
+
 .HeaderMenu {
-    display: flex;
+
+    .links {
+        transition: bottom $animation-type $animation-duration;
+        display: grid;
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100%;
+        text-align: center;
+        bottom: 100%;
+        background-color: transparentize($charade-color, 0.03);
+
+        &.is-open {
+            bottom: 0;
+        }
+    }
 
     a {
         position: relative;
@@ -7,10 +24,6 @@
         text-decoration: none;
         display: block;
         padding: 30px 25px;
-
-        &:last-child {
-            padding-right: 0;
-        }
 
         &:after {
             content: '';
@@ -25,6 +38,26 @@
 
             &:after {
                 background-color: $pink-color;
+            }
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+
+        .links {
+            display: flex;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .HeaderMenuNav {
+            display: none;
+        }
+
+        a {
+
+            &:last-child {
+                padding-right: 0;
             }
         }
     }

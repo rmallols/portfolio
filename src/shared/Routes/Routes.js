@@ -38,18 +38,20 @@ export default function Routes() {
 
     return (
         <div className="Routes">{
-            routes.map(({ to, text, component, isExternal }, index) => (
+            routes.map(({ id, to, component }, index) => (
                 <AnimatedRoute
-                    key={to}
+                    key={id}
                     path={to}
                     exact
                     render={() => (
                         <div className={component.name}>
-                            <main>{component()}</main>
-                            <Footer {...routes[index + 1]} />
+                            <div className="wrapper">
+                                <main>{component()}</main>
+                                <Footer {...routes[index + 1]} />
+                            </div>
                         </div>
                     )}
-                    className="AnimatedRoute"
+                    className={`AnimatedRoute is-${id}`}
                     atEnter={{ offset: animationOffset }}
                     atLeave={{ offset: -animationOffset }}
                     atActive={{ offset: 0 }}

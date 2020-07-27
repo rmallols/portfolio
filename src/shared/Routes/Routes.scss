@@ -1,57 +1,91 @@
-.AnimatedRoute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+.Routes {
+    overflow-y: hidden;
 
-    > * { //Animation layer
+    @mixin overlay($z-index) {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: $z-index;
+    }
 
-        > * { //View root layer
-            $padding: 30px;
-            height: 100vh;
-            overflow-y: auto;
-            padding: $header-height $padding 0 $padding;
+    @mixin overlay_rug($line-left) {
 
-            &:before {
-                $line-left: 125px;
-                $line-width: 3px;
-                @include overlay(-1);
-                background-color: transparentize($charade-color, 0.03);
-                top: auto;
-                bottom: 100%;
-                width: $line-width;
-                left: $line-left;
-                animation-name: show-overlay;
-                animation-fill-mode: forwards;
-                animation-duration: $animation-duration;
-                animation-delay: 1s;
+        &:before {
+            $line-width: 3px;
+            @include overlay(-1);
+            background-color: transparentize($charade-color, 0.03);
+            top: auto;
+            position: fixed;
+            bottom: 100%;
+            width: $line-width;
+            left: $line-left;
+            animation-name: show-overlay;
+            animation-fill-mode: forwards;
+            animation-duration: $animation-duration;
+            animation-delay: 1s;
 
-                @keyframes show-overlay {
-                    50% {
-                        left: $line-left;
-                        width: $line-width;
-                    }
-                    100% {
-                        left: 0;
-                        bottom: 0;
-                        width: 100%;
-                    }
+            @keyframes show-overlay {
+                50% {
+                    left: $line-left;
+                    bottom: 0;
+                    width: $line-width;
+                }
+                100% {
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
                 }
             }
+        }
+    }
 
-            &:after {
-                @include overlay(-2);
-            }
+    .AnimatedRoute {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
 
-            > * { //content layer
-                animation-name: show-content;
-                animation-duration: $animation-duration;
-                animation-fill-mode: forwards;
-                opacity: 0;
-                animation-delay: 1.25s;
-        
-                @keyframes show-content {
-                    to { opacity: 1; }
+        > * { //Animation layer
+            will-change: transform;
+
+            > * { //View root layer - the first one that gets changed
+                @include overlay_rug(110px);
+                border: 1px solid transparent;
+
+                &:after {
+                    @include overlay(-2);
+                }
+
+                .wrapper {
+                    margin-top: $header-height_mobile;
+                    padding: 0 15px;
+                    height: $available-height_mobile;
+                    overflow-y: auto;
+                    animation-name: show-content;
+                    animation-duration: $animation-duration;
+                    animation-fill-mode: forwards;
+                    opacity: 0;
+                    animation-delay: 1.25s;
+            
+                    @keyframes show-content {
+                        to { opacity: 1; }
+                    }
+                }
+
+                @media (min-width: $mobile-width) {
+                    @include overlay_rug(125px);
+
+                    .wrapper {
+                        margin-top: 0;
+                        padding-top: $header-height;
+                        height: 100vh;
+                        padding: $header-height 30px 0 30px;
+                    }
                 }
             }
         }

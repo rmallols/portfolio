@@ -1,3 +1,4 @@
+@import './SkillsChart/SkillsChart.scss';
 @import './SkillsText/SkillsText.scss';
 
 .Skills {
@@ -7,7 +8,15 @@
     }
 
     main {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 60px;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    @media (min-width: $mobile-width) {
+
+        main {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+        }
     }
 }

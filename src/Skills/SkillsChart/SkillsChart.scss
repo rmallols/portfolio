@@ -1,0 +1,7 @@
+.SkillsChart {
+    height: $image-height_mobile;
+
+    @media (min-width: $mobile-width) {
+        height: auto;
+    }
+}

@@ -2,5 +2,8 @@ footer {
     height: $footer-height;
     display: grid;
     align-items: center;
-    justify-content: center;
+
+    @media (min-width: $tablet-width) {
+        justify-content: center;
+    }
 }

@@ -29,7 +29,7 @@ function ExperienceCompany({
 }) {
     return (
         <div className="ExperienceCompany">
-            <div>{
+            <div className="logoWrapper">{
                 typeof logo === 'string' ?
                     <i className={`logo ${logo}`} /> :
                     logo

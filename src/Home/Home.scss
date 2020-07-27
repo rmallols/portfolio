@@ -3,11 +3,17 @@
     &:after {
         background-image: url('./Home.jpeg');
     }
+    
+    .wrapper {
+        display: grid;
+        align-items: end;
+    }
 
     main {
         grid-template-columns: 1fr;
         align-content: center;
         grid-gap: 45px;
+        height: $available-height;
     }
 
     .welcome {

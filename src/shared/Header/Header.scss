@@ -11,5 +11,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding-left: 15px;
+
+    @media (min-width: $mobile-width) {
+        padding: 0 30px;
+    }
 }
