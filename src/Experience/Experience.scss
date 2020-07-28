@@ -8,82 +8,79 @@
 
     main {
         align-content: flex-start;
+    }
 
-        .companiesWrapper {            
-            margin: 0 auto;
-            display: grid;
+    .companiesWrapper {            
+        margin: 0 auto;
+        display: grid;
+    }
 
-            .ExperienceCompany {
-                display: grid;
-                grid-template-columns: 1fr;
+    .ExperienceCompany {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
-                .logoWrapper {
-                    height: $image-height_mobile;
-                }
-        
-                .details {
-                    display: grid;
-                    grid-gap: 15px;
-        
-                    .position {
-                        display: grid;
-                        grid-gap: 15px;
-                    }
+    .logoWrapper {
+        height: $image-height_mobile;
+    }
 
-                    p {
-                        margin: 5px 0;
-                        line-height: 1.5;
+    .details {
+        display: grid;
+        grid-gap: 15px;
+    }
 
-                        &:first-of-type {
-                            margin-top: 0;
-                        }
-                    }
-                }
+    .position {
+        display: grid;
+        grid-gap: 15px;
+    }
 
-                .logo {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
+    p {
+        margin: 5px 0;
+        line-height: 1.5;
 
-                    &.logo_hsbc         { background-image: url('./logos/hsbc.svg'); }
-                    &.logo_sky          { background-image: url('./logos/sky.svg'); }
-                    &.logo_flowable     { background-image: url('./logos/flowable.svg'); }
-                    &.logo_mimacom      { background-image: url('./logos/mimacom.svg'); }
-                    &.logo_palluc       { background-image: url('./logos/palluc.svg'); }
-                    &.logo_ever         { background-image: url('./logos/ever.svg'); }
-                    &.logo_vtt          { background-image: url('./logos/vtt.svg'); }
-                }
-            }
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .logo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &.logo_hsbc         { background-image: url('./logos/hsbc.svg'); }
+        &.logo_sky          { background-image: url('./logos/sky.svg'); }
+        &.logo_flowable     { background-image: url('./logos/flowable.svg'); }
+        &.logo_mimacom      { background-image: url('./logos/mimacom.svg'); }
+        &.logo_palluc       { background-image: url('./logos/palluc.svg'); }
+        &.logo_ever         { background-image: url('./logos/ever.svg'); }
+        &.logo_vtt          { background-image: url('./logos/vtt.svg'); }
+    }
+
+    @media (min-width: $mobile-width) {
+
+        .position {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
     @media (min-width: $tablet-width) {
         $logo-width: 400px;
 
-        main {
+        .companiesWrapper {
+            max-width: $logo-width + $max-text-width;
+            grid-gap: 50px;
+        }
 
-            .companiesWrapper {
-                max-width: $logo-width + $max-text-width;
-                grid-gap: 50px;
+        .ExperienceCompany {
+            grid-template-columns: $logo-width 1fr;
+        }
 
-                .ExperienceCompany {
-                    grid-template-columns: $logo-width 1fr;
-
-                    .logoWrapper {
-                        height: auto;
-                    }
-
-                    .details {
-
-                        .position {
-                            grid-template-columns: repeat(3, 1fr);
-                        }
-                    }
-                }
-            }
+        .logoWrapper {
+            height: auto;
         }
     }
 }

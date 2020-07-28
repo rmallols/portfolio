@@ -3,7 +3,7 @@ import Link from '../Link/Link';
 
 export default function Footer({ to, text, isExternal }) {
     return (
-        <footer className="is-text-center">
+        <footer className="is-text-centered">
             <Link
                 to={to}
                 text={text}

@@ -3,11 +3,6 @@
     &:after {
         background-image: url('./Home.jpeg');
     }
-    
-    .wrapper {
-        display: grid;
-        align-items: end;
-    }
 
     main {
         grid-template-columns: 1fr;
@@ -36,18 +31,28 @@
         grid-area: Code;
     }
 
+    @media (min-width: $mobile-width) and (orientation:landscape) {
+
+        main {
+            align-content: flex-start;
+        }
+    }
+
     @media (min-width: $mobile-width) {
+
+
 
         .codeWrapper {
             display: grid;
         }
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $desktop-width) {
 
         main {
             grid-template-columns: 3fr 4fr;
             justify-content: right;
+            align-content: center;
             grid-gap: 90px;
         }
         

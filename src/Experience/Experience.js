@@ -1,5 +1,5 @@
 import React from 'react';
-import experienceList from './experience-list';
+import experienceList from './experienceList';
 
 export default function Experience() {
     return (
@@ -12,9 +12,7 @@ export default function Experience() {
                         <>{
                             experience.details
                                 .map((paragraph, index) => (
-                                    <p key={index}>
-                                        {paragraph}
-                                    </p>
+                                    <p key={index}>{paragraph}</p>
                                 ))
                         }</>
                     }

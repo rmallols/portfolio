@@ -62,6 +62,8 @@
                 }
 
                 .wrapper {
+                    display: grid;
+                    align-items: end;
                     margin-top: $header-height_mobile;
                     padding: 0 15px;
                     height: $available-height_mobile;
@@ -77,12 +79,11 @@
                     }
                 }
 
-                @media (min-width: $mobile-width) {
+                @media (min-width: $desktop-width) {
                     @include overlay_rug(125px);
 
                     .wrapper {
                         margin-top: 0;
-                        padding-top: $header-height;
                         height: 100vh;
                         padding: $header-height 30px 0 30px;
                     }

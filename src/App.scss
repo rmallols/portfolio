@@ -11,27 +11,11 @@
         margin: 0 auto;
     }
 
-    .is-text-center {
-        text-align: center;
-    }
+    .is-text-centered   { text-align: center; }
 
-    .is-text-right {
-        text-align: right;
-    }
-
-    .is-color-red {
-        color: $red-color;
-    }
-
-    .is-color-yellow {
-        color: $yellow-color;
-    }
-
-    .is-color-green {
-        color: $green-color;
-    }
-
-    .is-color-cyan {
-        color: $cyan-color;
-    }
+    .is-color-red       { color: $red-color; }
+    .is-color-yellow    { color: $yellow-color; }
+    .is-color-green     { color: $green-color; }
+    .is-color-cyan      { color: $cyan-color; }
+    .is-color-pink      { color: $pink-color; }
 }

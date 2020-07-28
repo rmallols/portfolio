@@ -22,4 +22,5 @@ $available-height_mobile: calc(#{var(--vh, 1vh)} - #{$header-height_mobile});
 $image-height_mobile: calc(100vw * 0.6);
 
 $mobile-width: 650px;
-$tablet-width: 1200px;
+$tablet-width: 900px;
+$desktop-width: 1200px;

@@ -1,8 +1,12 @@
 .SkillsText {
-    align-self: center;
+    align-self: flex-start;
     overflow: auto;
 
-    @media (min-width: $mobile-width) {
+    @media (min-width: $tablet-width) {
         max-height: $available-height;
+    }
+
+    @media (min-width: $desktop-width) {
+        align-self: center;
     }
 }

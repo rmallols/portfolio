@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import HeaderMenuNav from './HeaderMenuNav/HeaderMenuNav';
-import routes from '../../Routes/routes-list';
+import routesList from '../../Routes/routesList';
 import Link from '../../Link/Link';
 
 export default function HeaderMenu() {
@@ -12,7 +12,7 @@ export default function HeaderMenu() {
         <div className="HeaderMenu">
             <HeaderMenuNav isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
             <div className={`links ${isOpen ? 'is-open' : ''}`}>{
-                routes.map(route => (
+                routesList.map(route => (
                     <MenuLink
                         key={route.to}
                         route={route}

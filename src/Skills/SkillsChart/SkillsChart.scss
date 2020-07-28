@@ -1,7 +1,7 @@
 .SkillsChart {
     height: $image-height_mobile;
 
-    @media (min-width: $mobile-width) {
+    @media (min-width: $tablet-width) {
         height: auto;
     }
 }

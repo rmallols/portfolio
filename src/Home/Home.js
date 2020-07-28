@@ -28,9 +28,9 @@ export default function Home() {
                     Hi!
                     </h1>
                 <h5 className="animate__animated animate__bounceInUp">
-                    I'm a <label className="is-color-red">passionate</label><br />
-                    full-stack <label className="is-color-yellow">JavaScript</label> dev<br />
-                    based in <label className="is-color-green">London</label>.
+                    I'm a <label className="is-color-pink">passionate</label><br />
+                    full-stack <label className="is-color-green">JavaScript</label> dev<br />
+                    based in <label className="is-color-yellow">London</label>.
                 </h5>
             </div>
             <div className="codeWrapper">

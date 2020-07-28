@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatedRoute } from 'react-router-transition';
 import { useHistory } from 'react-router-dom';
-import routes from './routes-list';
+import routesList from './routesList';
 import Footer from '../Footer/Footer';
 
 export default function Routes() {
 
     const getCurrentRouteIndex = () => (
-        routes.findIndex(({ to }) => to === window.location.pathname)
+        routesList.findIndex(({ to }) => to === window.location.pathname)
     );
     const history = useHistory();
     const animationOffset = 100;
@@ -38,7 +38,7 @@ export default function Routes() {
 
     return (
         <div className="Routes">{
-            routes.map(({ id, to, component }, index) => (
+            routesList.map(({ id, to, component }, index) => (
                 <AnimatedRoute
                     key={id}
                     path={to}
@@ -47,7 +47,7 @@ export default function Routes() {
                         <div className={component.name}>
                             <div className="wrapper">
                                 <main>{component()}</main>
-                                <Footer {...routes[index + 1]} />
+                                <Footer {...routesList[index + 1]} />
                             </div>
                         </div>
                     )}

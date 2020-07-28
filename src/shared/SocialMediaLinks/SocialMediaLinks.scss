@@ -1,0 +1,28 @@
+.SocialMediaLinks {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 35px;
+
+    a {
+        $icon-size: 42px;
+        color: transparent;
+        font-size: 1px;
+        width: $icon-size;
+        height: $icon-size;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.is-meetup { background-image: url('./logos/meetup.svg'); }
+        &.is-youtube { background-image: url('./logos/youtube.svg'); }
+        &.is-github { background-image: url('./logos/github.svg'); }
+    }
+
+    @media (min-width: $tablet-width) {
+        display: grid;
+    }
+}

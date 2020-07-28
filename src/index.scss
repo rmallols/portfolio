@@ -4,6 +4,7 @@
 @import './shared/Routes/Routes.scss';
 @import './shared/Code/Code.scss';
 @import './shared/Footer/Footer.scss';
+@import './shared/SocialMediaLinks/SocialMediaLinks.scss';
 @import './App.scss';
 
 @mixin heading($font-size) {
@@ -35,13 +36,14 @@ html {
 main {
     display: grid;
     overflow: auto;
-    margin: 0 auto;    
+    margin: 0 auto;
+    width: 100%;
 }
 
 a {
     cursor: pointer;
-    text-decoration: none;
-    color: white;
+    color: $cyan-color;
+    text-decoration: underline;
 
     > * {
         cursor: pointer;

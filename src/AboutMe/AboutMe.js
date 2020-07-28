@@ -4,12 +4,12 @@ export default function AboutMe() {
     return (
         <div className="is-text">
             <p>
-                I'm a <label className="is-color-red">Software Enginner with 18 years of programming experience</label>. I’m a highly proficient Javascript
+                I'm a <label className="is-color-pink">Software Enginner with 18 years of programming experience</label>. I’m a highly proficient Javascript
                 / React / Angular developer, interested on standards,
                 efficiency, automated testing, usability, UI and UX.
             </p>
             <p>
-                <label className="is-color-green">I’m a very organized, responsible and committed person.</label>
+                <label className="is-color-yellow">I’m a very organized, responsible and committed person.</label>&nbsp;
                 I consider communication, respect and teamwork as the
                 key to personal and professional success.
             </p>
@@ -21,7 +21,7 @@ export default function AboutMe() {
             </p>
             <p>
                 I have been working for multiple companies and customers
-                in the <label className="is-color-red">UK, Germany, Switzerland and Spain.</label>
+                in the <label className="is-color-yellow">UK, Germany, Switzerland and Spain.</label>
             </p>
             <p>
                 My favourite tech books are: Javascript: The Good Parts,

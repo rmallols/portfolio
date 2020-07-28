@@ -13,7 +13,7 @@
     align-items: center;
     padding-left: 15px;
 
-    @media (min-width: $mobile-width) {
+    @media (min-width: $desktop-width) {
         padding: 0 30px;
     }
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './shared/Header/Header';
 import Routes from './shared/Routes/Routes';
+import SocialMediaLinks from './shared/SocialMediaLinks/SocialMediaLinks';
 import 'animate.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Router>
                 <Header />
                 <Routes />
+                <SocialMediaLinks />
             </Router>
         </div>
     );
