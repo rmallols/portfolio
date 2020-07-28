@@ -14,7 +14,7 @@ jobs:
     executor:
       name: node/default
     steps:
-      # - checkout
+      - checkout
       - node/with-cache:
           steps:
             - run: npm run lint
@@ -22,6 +22,7 @@ jobs:
     executor:
       name: node/default
     steps:
+      - checkout
       - node/with-cache:
           steps:
             - run: ./node_modules/.bin/now -t ${NOW_TOKEN}
