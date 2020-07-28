@@ -6,7 +6,6 @@ import SocialMediaLinks from './shared/SocialMediaLinks/SocialMediaLinks';
 import 'animate.css';
 
 function App() {
-
     const setViewHeight = () => {
         // This is necessary to prevent from having issues on mobile web
         // because of its (potentially) floating address bar

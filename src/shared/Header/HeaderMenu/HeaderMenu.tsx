@@ -5,27 +5,25 @@ import routesList, { Route } from '../../Routes/routesList';
 import Link from '../../Link/Link';
 
 export default function HeaderMenu() {
-
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="HeaderMenu">
             <HeaderMenuNav isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-            <div className={`links ${isOpen ? 'is-open' : ''}`}>{
-                routesList.map(route => (
+            <div className={`links ${isOpen ? 'is-open' : ''}`}>
+                {routesList.map((route) => (
                     <MenuLink
                         key={route.to}
                         route={route}
                         onClick={() => setIsOpen(false)}
                     />
-                ))
-            }</div>
+                ))}
+            </div>
         </div>
     );
 }
 
 function MenuLink({ route: { to, text, isExternal }, onClick }: MenuLinkProps) {
-
     const location = useLocation();
     const isActive = () => to === location.pathname;
 
@@ -42,5 +40,5 @@ function MenuLink({ route: { to, text, isExternal }, onClick }: MenuLinkProps) {
 
 interface MenuLinkProps {
     route: Route;
-    onClick: Function
+    onClick: (event: React.MouseEvent) => void;
 }

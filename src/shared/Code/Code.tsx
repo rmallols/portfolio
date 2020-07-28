@@ -3,10 +3,8 @@ import Prism from 'prismjs';
 import './code-dracula.css';
 
 export default function Code({ code }: Code) {
-
-    const getFormattedCode = () => (
-        Prism.highlight(code, Prism.languages.javascript, 'javascript')
-            );
+    const getFormattedCode = () =>
+        Prism.highlight(code, Prism.languages.javascript, 'javascript');
 
     return (
         <div

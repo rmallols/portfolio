@@ -17,6 +17,7 @@ module.exports = {
         "no-use-before-define": 0,
         "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
         "react/no-unescaped-entities": 0,
+        "react/no-danger": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/ban-ts-comment": 0,
         "jsx-a11y/label-has-associated-control": 0,

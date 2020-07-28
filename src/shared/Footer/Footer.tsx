@@ -12,7 +12,7 @@ export default function Footer({ to, text, isExternal }: LinkProps) {
                     'button',
                     'animate__animated',
                     'animate__lightSpeedInLeft',
-                    'animate__delay-1s'
+                    'animate__delay-1s',
                 ].join(' ')}
             />
         </footer>

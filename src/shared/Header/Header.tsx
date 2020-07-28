@@ -8,5 +8,5 @@ export default function Header() {
             <HeaderLogo />
             <HeaderMenu />
         </header>
-    )
+    );
 }

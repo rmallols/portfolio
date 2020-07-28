@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import skillsChartDisplay from './skillsChartDisplay';
 
 export default function SkillsChart() {
-
     const [rootNode, setRootNode] = useState<HTMLCanvasElement | undefined>();
 
     useEffect(() => {
@@ -19,7 +18,7 @@ export default function SkillsChart() {
         <div className="SkillsChart">
             <canvas
                 className="radar"
-                ref={el => !rootNode && el && setRootNode(el)}
+                ref={(el) => !rootNode && el && setRootNode(el)}
             />
         </div>
     );

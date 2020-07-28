@@ -6,14 +6,16 @@ import routesList from './routesList';
 import Footer from '../Footer/Footer';
 
 export default function Routes() {
-
-    const getCurrentRouteIndex = () => (
-        routesList.findIndex(({ to }) => to === window.location.pathname)
-    );
+    const getCurrentRouteIndex = () =>
+        routesList.findIndex(({ to }) => to === window.location.pathname);
     const history = useHistory();
     const animationOffset = 100;
-    const [currentRouteIndex, setCurrentRouteIndex] = useState(getCurrentRouteIndex());
-    const [prevRouteIndex, setPrevRouteIndex] = useState(getCurrentRouteIndex());
+    const [currentRouteIndex, setCurrentRouteIndex] = useState(
+        getCurrentRouteIndex()
+    );
+    const [prevRouteIndex, setPrevRouteIndex] = useState(
+        getCurrentRouteIndex()
+    );
 
     useEffect(() => {
         history.listen(() => {
@@ -32,14 +34,14 @@ export default function Routes() {
             // change route before the timeout happens. It actually can
             // happen now if the user changes route before the animation
             // ends, but I guess that's a minor issue, given the circumstances
-            setTimeout(() => setPrevRouteIndex(routeIndex), 1000)
+            setTimeout(() => setPrevRouteIndex(routeIndex), 1000);
         });
         // eslint-disable-next-line
     }, []);
 
     return (
-        <div className="Routes">{
-            routesList.map((route, index) => (
+        <div className="Routes">
+            {routesList.map((route, index) => (
                 <AnimatedRoute
                     key={route.id}
                     path={route.to}
@@ -49,27 +51,35 @@ export default function Routes() {
                         return (
                             <div className="view-root">
                                 <div className="wrapper">
-                                    <main>{route.component && route.component()}</main>
-                                    <Footer to={to} text={text} isExternal={isExternal} />
+                                    <main>
+                                        {route.component && route.component()}
+                                    </main>
+                                    <Footer
+                                        to={to}
+                                        text={text}
+                                        isExternal={isExternal}
+                                    />
                                 </div>
                             </div>
-                        )
+                        );
                     }}
                     className={`AnimatedRoute ${route.id}-component`}
                     atEnter={{ offset: animationOffset }}
                     atLeave={{ offset: -animationOffset }}
                     atActive={{ offset: 0 }}
                     mapStyles={(styles: Styles) => {
-                        const offset = prevRouteIndex < currentRouteIndex ?
-                            styles.offset :
-                            -styles.offset;
+                        const offset =
+                            prevRouteIndex < currentRouteIndex
+                                ? styles.offset
+                                : -styles.offset;
                         return {
                             transform: `translateX(${offset}%)`,
                         };
-                    }} />
-            ))
-        }</div>
-    )
+                    }}
+                />
+            ))}
+        </div>
+    );
 }
 
 interface Styles {

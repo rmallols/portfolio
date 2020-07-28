@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix src/**/*.{ts,tsx}",
-    "lint:watch": "esw --fix src/**/*.{ts,tsx} --watch"
+    "lint": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "lint:watch": "esw --fix \"src/**/*.{ts,tsx}\" --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
