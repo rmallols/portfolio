@@ -1,7 +1,10 @@
-.Home {
+.home-component {
 
-    &:after {
-        background-image: url('./Home.jpeg');
+    .view-root {
+        
+        &:after {
+            background-image: url('./Home.jpeg');
+        }
     }
 
     main {

@@ -1,9 +1,12 @@
 @import './ExperienceKodiriLogo/ExperienceKodiriLogo.scss';
 
-.Experience {
+.experience-component {
 
-    &:after {
-        background-image: url('./Experience.jpg');
+    .view-root {
+        
+        &:after {
+            background-image: url('./Experience.jpg');
+        }
     }
 
     main {

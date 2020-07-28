@@ -44,14 +44,14 @@ export default function Routes() {
                     path={to}
                     exact
                     render={() => (
-                        <div className={component.name}>
+                        <div className="view-root">
                             <div className="wrapper">
                                 <main>{component()}</main>
                                 <Footer {...routesList[index + 1]} />
                             </div>
                         </div>
                     )}
-                    className={`AnimatedRoute is-${id}`}
+                    className={`AnimatedRoute ${id}-component`}
                     atEnter={{ offset: animationOffset }}
                     atLeave={{ offset: -animationOffset }}
                     atActive={{ offset: 0 }}

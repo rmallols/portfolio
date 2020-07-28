@@ -1,6 +1,9 @@
-.AboutMe {
+.about-me-component {
 
-    &:after {
-        background-image: url('./AboutMe.jpg');
+    .view-root {
+
+        &:after {
+            background-image: url('./AboutMe.jpg');
+        }
     }
 }

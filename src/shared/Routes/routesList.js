@@ -10,7 +10,7 @@ const routesList = [
     { id: 'skills', to: '/skills', text: 'Skills', component: Skills },
     { id: 'experience', to: '/experience', text: 'Experience', component: Experience },
     { id: 'community', to: '/community', text: 'Community', component: Community },
-    { id: 'contact-me', to: 'mailto:ricardo.mallols@gmail.com', text: 'Contact me', isExternal: true },
+    { id: 'contact-me', to: 'mailto:hi@mallols.dev', text: 'Contact me', isExternal: true },
 ];
 
 export default routesList;

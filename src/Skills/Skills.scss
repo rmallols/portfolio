@@ -1,10 +1,13 @@
 @import './SkillsChart/SkillsChart.scss';
 @import './SkillsText/SkillsText.scss';
 
-.Skills {
+.skills-component {
 
-    &:after {
-        background-image: url('./Skills.jpg');
+    .view-root {
+
+        &:after {
+            background-image: url('./Skills.jpg');
+        }
     }
 
     main {
