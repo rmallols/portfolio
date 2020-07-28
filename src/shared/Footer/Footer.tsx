@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from '../Link/Link';
+import Link, { LinkProps } from '../Link/Link';
 
-export default function Footer({ to, text, isExternal }) {
+export default function Footer({ to, text, isExternal }: LinkProps) {
     return (
         <footer className="is-text-centered">
             <Link

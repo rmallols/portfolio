@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import HeaderMenuNav from './HeaderMenuNav/HeaderMenuNav';
-import routesList from '../../Routes/routesList';
+import routesList, { Route } from '../../Routes/routesList';
 import Link from '../../Link/Link';
 
 export default function HeaderMenu() {
@@ -24,16 +24,23 @@ export default function HeaderMenu() {
     );
 }
 
-function MenuLink({ route, onClick }) {
+function MenuLink({ route: { to, text, isExternal }, onClick }: MenuLinkProps) {
 
     const location = useLocation();
-    const isActive = () => route.to === location.pathname;
+    const isActive = () => to === location.pathname;
 
     return (
         <Link
-            {...route}
-            onClick={onClick}
+            to={to}
+            text={text}
+            isExternal={isExternal}
             className={isActive() ? 'is-active' : ''}
+            onClick={onClick}
         />
     );
+}
+
+interface MenuLinkProps {
+    route: Route;
+    onClick: Function
 }

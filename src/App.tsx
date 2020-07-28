@@ -8,8 +8,8 @@ import 'animate.css';
 function App() {
 
     const setViewHeight = () => {
-        //This is necessary to prevent from having issues on mobile web
-        //because of its (potentially) floating address bar
+        // This is necessary to prevent from having issues on mobile web
+        // because of its (potentially) floating address bar
         const vh = window.innerHeight;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     };

@@ -3,12 +3,12 @@ import skillsChartDisplay from './skillsChartDisplay';
 
 export default function SkillsChart() {
 
-    const [rootNode, setRootNode] = useState();
+    const [rootNode, setRootNode] = useState<HTMLCanvasElement | undefined>();
 
     useEffect(() => {
-        //We delay the display of the chart because of two reasons:
-        //1. Performance: To relieve the stress of view migration
-        //2. UX: To show the expansion of the chart once it's fully visible
+        // We delay the display of the chart because of two reasons:
+        // 1. Performance: To relieve the stress of view migration
+        // 2. UX: To show the expansion of the chart once it's fully visible
         const chartDisplayDelay = 1250;
         if (rootNode) {
             setTimeout(() => skillsChartDisplay(rootNode), chartDisplayDelay);
