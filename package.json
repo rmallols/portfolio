@@ -51,6 +51,7 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-typescript-prettier": "^3.1.0",
     "eslint-watch": "^7.0.0",
+    "now": "^19.2.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   }
