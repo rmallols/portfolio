@@ -1,5 +1,7 @@
 .Routes {
     overflow-y: hidden;
+    height: 100vh;
+    background-color: $charade-color;
 
     @mixin overlay($z-index) {
         content: '';
