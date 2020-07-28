@@ -27,8 +27,12 @@ jobs:
             - run: now -t ${NOW_TOKEN}
 
 workflows:
-    build-and-test-and-deploy:
+    build-test-and-deploy:
       jobs:
         - build
         - test
+            requires:
+              - build
         - deploy
+            requires:
+              - test
