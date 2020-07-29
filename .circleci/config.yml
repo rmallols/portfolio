@@ -25,7 +25,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: ./node_modules/.bin/now -t ${NOW_TOKEN}
+            - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN}
 
 workflows:
     build-test-and-deploy:
