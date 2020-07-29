@@ -29,12 +29,14 @@
     "react-router-dom": "^5.2.0",
     "react-router-transition": "^2.0.0",
     "react-scripts": "3.4.1",
+    "serve": "^11.3.2",
     "start-server-and-test": "^1.11.2",
     "typescript": "^3.9.7",
     "vercel": "^19.2.0"
   },
   "scripts": {
-    "start": "PORT=3006 react-scripts start",
+    "start": "PORT=3006 serve -s build",
+    "start-dev": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --fix \"src/**/*.{ts,tsx}\"",
     "ts": "tsc",
