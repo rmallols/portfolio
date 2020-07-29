@@ -41,6 +41,8 @@ jobs:
             - store_artifacts:
                 path: ./test-results
   run-tests-e2e:
+    executor:
+      name: node/default    
     steps:
       - cypress/run:
   deploy-to-uat:

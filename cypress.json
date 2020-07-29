@@ -1,3 +1,8 @@
 {
-    "video": false
+    "video": false,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "test-results/test-e2e.xml",
+      "toConsole": true
+    }
 }
