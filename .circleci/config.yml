@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  cypress: cypress-io/cypress@1.16.1
+  cypress: cypress-io/cypress@1
 jobs:
   build-artifact:
     executor:
@@ -41,7 +41,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
+      - cypress/run:
           steps:
             - run: npm run test:e2e
   deploy-to-uat:
@@ -75,14 +75,15 @@ workflows:
             requires:
               - lint-code
               - check-typescript
-        - run-tests-e2e:
-            requires:
-              - lint-code
-              - check-typescript
         - deploy-to-uat:
             requires:
               - run-tests-unit
               - run-tests-e2e
+        - run-tests-e2e
+        # - run-tests-e2e:
+        #     requires:
+        #       - lint-code
+        #       - check-typescript
         - approve-uat:
             type: approval
             requires:

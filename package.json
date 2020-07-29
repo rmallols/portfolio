@@ -39,8 +39,9 @@
     "ts": "tsc",
     "test:unit": "react-scripts test --watchAll=false",
     "test:unit:watch": "react-scripts test",
-    "test:e2e": "node ./cypress/run-cypress-tests.js",
-    "test:e2e:watch": "cypress open",
+    "test:e2e": "CYPRESS_BASE_URL=portfolio.rmallols.vercel.app cypress run",
+    "test:e2e:local": "CYPRESS_BASE_URL=http://localhost:3006 cypress run",
+    "test:e2e:local:watch": "CYPRESS_BASE_URL=http://localhost:3006 cypress open",
     "test:visual": "backstop test",
     "eject": "react-scripts eject"
   },
