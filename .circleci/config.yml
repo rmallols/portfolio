@@ -2,8 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build:
-    description: Build artifact
+  build-artifact:
     executor:
       name: node/default
     steps:
@@ -11,8 +10,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-  test:
-    description: Run tests
+  lint-code:
     executor:
       name: node/default
     steps:
@@ -20,10 +18,23 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run lint
-            - run: npm run ts
+  check-typescript:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm run ts            
+  run-unit-tests:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
             - run: npm run test
-  deploy-uat:
-    description: Deploy to User Acceptance Testing
+  deploy-to-uat:
     executor:
       name: node/default
     steps:
@@ -31,8 +42,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN}
-  deploy-prd:
-    description: Deploy to Production
+  deploy-to-prd:
     executor:
       name: node/default
     steps:
@@ -44,17 +54,24 @@ jobs:
 workflows:
     build-test-and-deploy:
       jobs:
-        - build
-        - test:
+        - build-artifact
+        - lint-code:
             requires:
-              - build
-        - deploy-uat:
+              - build-artifact
+        - check-typescript:
             requires:
-              - test
-        - approve-prd:
+              - build-artifact
+        - run-unit-tests:
+            requires:
+              - lint-code
+              - check-typescript
+        - deploy-to-uat:
+            requires:
+              - run-unit-tests
+        - approve-uat:
             type: approval
             requires:
-              - deploy-uat
-        - deploy-prd:
+              - deploy-to-uat
+        - deploy-to-prd:
             requires:
-              - approve-prd
+              - approve-uat
