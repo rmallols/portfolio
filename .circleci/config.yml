@@ -44,7 +44,7 @@ jobs:
   #     - cypress/run:
   #         steps:
   #           - run: npm run test:e2e
-  # deploy-to-uat:
+  deploy-to-uat:
     executor:
       name: node/default
     steps:
