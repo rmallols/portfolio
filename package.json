@@ -20,7 +20,6 @@
     "eslint-config-airbnb-typescript-prettier": "^3.1.0",
     "eslint-watch": "^7.0.0",
     "node-sass": "^4.14.1",
-    "now": "^19.2.0",
     "prettier": "^2.0.5",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
@@ -28,7 +27,8 @@
     "react-router-dom": "^5.2.0",
     "react-router-transition": "^2.0.0",
     "react-scripts": "3.4.1",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "vercel": "^19.2.0"
   },
   "scripts": {
     "start": "PORT=3006 react-scripts start",
@@ -54,6 +54,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

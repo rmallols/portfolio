@@ -41,7 +41,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN}
+            - run: ./node_modules/.bin/vercel -c -t ${NOW_TOKEN}
   deploy-to-prd:
     executor:
       name: node/default
@@ -49,7 +49,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN} --prod
+            - run: ./node_modules/.bin/vercel -c -t ${NOW_TOKEN} --prod
 
 workflows:
     build-test-and-deploy:

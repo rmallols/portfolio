@@ -15,7 +15,7 @@ export default function Home() {
         } = getDevDetails(devDetails);
 
         //then
-        expect(loves).to.equal('React');
+        expect(loves).to.equal('React!');
         expect(learning).to.deep.equal(['Deno', 'Vue3']);
         expect(favAnimal).to.equal('Sharktopus');
     });
