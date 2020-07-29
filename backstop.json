@@ -16,24 +16,35 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    }
+      "label": "Homepage",
+      "url": "http://localhost:3006",
+      "delay": 1500,
+      "misMatchThreshold": 1.0
+    },
+    {
+        "label": "About me",
+        "url": "http://localhost:3006/about-me",
+        "delay": 1500,
+        "misMatchThreshold": 1.0
+    },
+    {
+        "label": "Skills",
+        "url": "http://localhost:3006/skills",
+        "delay": 1500,
+        "misMatchThreshold": 1.0
+    },
+    {
+        "label": "Experience",
+        "url": "http://localhost:3006/experience",
+        "delay": 1500,
+        "misMatchThreshold": 1.0
+    },
+    {
+        "label": "Community",
+        "url": "http://localhost:3006/community",
+        "delay": 1500,
+        "misMatchThreshold": 1.0
+    }        
   ],
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",
@@ -46,7 +57,7 @@
     "format" : "junit" ,
     "testReportFileName": "test-visual"
   },
-  "report": ["CI"],
+  "report": ["browser", "CI"],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
