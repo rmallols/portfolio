@@ -41,6 +41,8 @@ jobs:
             - store_artifacts:
                 path: ./test-results
   bump-version:
+    executor:
+      name: node/default  
     steps:
       - add_ssh_keys:
           fingerprints:
