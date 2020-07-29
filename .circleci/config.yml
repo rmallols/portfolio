@@ -46,7 +46,15 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "SO:ME:FIN:G:ER:PR:IN:T"           
+            - "31:05:a7:62:3d:86:f9:b5:6c:f3:9c:0b:94:53:84:3d"
+      - run:
+            name: Bump version
+            command: |
+                git config user.name "Ricardo Mallols"
+                git config user.email "ricardo.mallols@gmail.com"
+                git pull --rebase
+                npm version patch -m "Bump version [ci skip]"
+                git push && git push --tags                     
   deploy-to-uat:
     executor:
       name: node/default
