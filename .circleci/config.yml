@@ -44,6 +44,7 @@ jobs:
     executor:
       name: node/default  
     steps:
+      - checkout
       - add_ssh_keys:
           fingerprints:
             - "31:05:a7:62:3d:86:f9:b5:6c:f3:9c:0b:94:53:84:3d"
