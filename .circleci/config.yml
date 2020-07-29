@@ -18,6 +18,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run lint
+            - run: npm run ts
+            - run: npm run test
   deploy:
     executor:
       name: node/default
