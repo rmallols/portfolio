@@ -33,7 +33,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm run test
+            - run: npm run test:unit
   deploy-to-uat:
     executor:
       name: node/default

@@ -16,6 +16,7 @@
     "@typescript-eslint/parser": "^3.7.1",
     "animate.css": "^4.1.0",
     "chart.js": "^2.9.3",
+    "cypress": "^4.11.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-typescript-prettier": "^3.1.0",
     "eslint-watch": "^7.0.0",
@@ -35,8 +36,10 @@
     "build": "react-scripts build",
     "lint": "eslint --fix \"src/**/*.{ts,tsx}\"",
     "ts": "tsc",
-    "test": "react-scripts test --watchAll=false",
-    "test:watch": "react-scripts test",
+    "test:unit": "react-scripts test --watchAll=false",
+    "test:unit:watch": "react-scripts test",
+    "test:e2e": "cypress run",
+    "test:e2e:watch": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
