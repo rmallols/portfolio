@@ -64,7 +64,7 @@ workflows:
     build-test-and-deploy:
       jobs:
         - build-artifact
-        - run-tests-e2e
+        - run-tests-e2e:
             requires:
               - build-artifact        
         - lint-code:
