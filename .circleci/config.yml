@@ -40,6 +40,18 @@ jobs:
                 path: ./test-results
             - store_artifacts:
                 path: ./test-results
+  bump-version:
+      - add_ssh_keys:
+          fingerprints:
+            - "31:05:a7:62:3d:86:f9:b5:6c:f3:9c:0b:94:53:84:3d"
+      - run:
+            name: Bump version
+            command: |
+                git config user.name "Ricardo Mallols"
+                git config user.email "ricardo.mallols@gmail.com"
+                git pull --rebase
+                npm version minor -m "Bump version [ci skip]"
+                git push && git push --tags                  
   deploy-to-uat:
     executor:
       name: node/default
@@ -81,7 +93,11 @@ workflows:
               - store_test_results:
                   path: ./test-results
               - store_artifacts:
-                  path: ./test-results 
+                  path: ./test-results
+          - bump-version
+        # - bump-version:
+        #     requires:
+        #       - cypress/run
         - approve-uat:
             type: approval
             requires:
