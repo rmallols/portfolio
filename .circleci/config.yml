@@ -94,8 +94,8 @@ workflows:
         #       - deploy-to-uat
         - approve-uat:
             type: approval
-            requires:
-              - cypress/run
+            # requires:
+            #   - cypress/run
         - deploy-to-prd:
             requires:
               - approve-uat
