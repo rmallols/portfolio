@@ -98,14 +98,13 @@ workflows:
                   path: ./test-results
               - store_artifacts:
                   path: ./test-results
-        - bump-version
-        # - bump-version:
-        #     requires:
-        #       - cypress/run
         - approve-uat:
             type: approval
             requires:
               - cypress/run
-        - deploy-to-prd:
+        - bump-version:
             requires:
               - approve-uat
+        - deploy-to-prd:
+            requires:
+              - bump-version
