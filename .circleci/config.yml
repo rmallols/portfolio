@@ -1,7 +1,8 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  cypress: cypress-io/cypress@1
+  cypress: cypress-io/cypress@1.25.1
+  backstop: reload/backstop@2.0.0
 jobs:
   build-artifact:
     executor:
@@ -40,6 +41,18 @@ jobs:
                 path: ./test-results
             - store_artifacts:
                 path: ./test-results
+  # run-tests-visual:
+  #   executor:
+  #     name: node/default
+  #   steps:
+  #     - checkout
+  #     - node/with-cache:
+  #         steps:
+  #           - run: npm run test:unit
+  #           - store_test_results:
+  #               path: ./test-results
+  #           - store_artifacts:
+  #               path: ./test-results
   deploy-to-uat:
     executor:
       name: node/default
@@ -60,7 +73,8 @@ jobs:
 workflows:
     build-test-and-deploy:
       jobs:
-        - build-artifact 
+        - build-artifact
+        - backstop/test
         - lint-code:
             requires:
               - build-artifact
@@ -75,8 +89,8 @@ workflows:
             requires:
               - run-tests-unit
         - cypress/run:
-            # requires:
-            #   - deploy-to-uat
+            requires:
+              - deploy-to-uat
             post-steps:
               - store_test_results:
                   path: ./test-results

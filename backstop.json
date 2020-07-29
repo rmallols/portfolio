@@ -40,9 +40,13 @@
     "bitmaps_test": "backstop_data/bitmaps_test",
     "engine_scripts": "backstop_data/engine_scripts",
     "html_report": "backstop_data/html_report",
-    "ci_report": "backstop_data/ci_report"
+    "ci_report": "test-results"
   },
-  "report": ["browser"],
+  "ci": {
+    "format" : "junit" ,
+    "testReportFileName": "test-visual"
+  },
+  "report": ["CI"],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
