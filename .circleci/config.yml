@@ -61,20 +61,26 @@ workflows:
     build-test-and-deploy:
       jobs:
         - build-artifact
+            name: Build artifact
         - lint-code:
+            name: Lint code
             requires:
               - build-artifact
         - check-typescript:
+            name: Check TypeScript
             requires:
               - build-artifact
         - run-tests-unit:
+            name: Run unit tests
             requires:
               - lint-code
               - check-typescript
         - deploy-to-uat:
+            name: Deploy to UAT env
             requires:
               - run-tests-unit
         - cypress/run:
+            name: Run e2e tests on UAT env
             requires:
               - deploy-to-uat
             post-steps:
@@ -83,9 +89,11 @@ workflows:
               - store_artifacts:
                   path: ./test-results 
         - approve-uat:
+            name: Approve uat changes
             type: approval
             requires:
               - cypress/run
         - deploy-to-prd:
+            name: Deploy to PRD env
             requires:
               - approve-uat
