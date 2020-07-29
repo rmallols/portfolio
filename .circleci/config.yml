@@ -36,15 +36,15 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run test:unit
-  run-tests-e2e:
-    executor:
-      name: cypress/run
-    steps:
-      - checkout
-      - cypress/run:
-          steps:
-            - run: npm run test:e2e
-  deploy-to-uat:
+  # run-tests-e2e:
+  #   executor:
+  #     name: cypress/run
+  #   steps:
+  #     - checkout
+  #     - cypress/run:
+  #         steps:
+  #           - run: npm run test:e2e
+  # deploy-to-uat:
     executor:
       name: node/default
     steps:
@@ -68,7 +68,9 @@ workflows:
     build-test-and-deploy:
       jobs:
         - build-artifact
-        - run-tests-e2e
+        - cypress/run
+            requires:
+              - build-artifact
         - lint-code:
             requires:
               - build-artifact
