@@ -40,11 +40,18 @@ jobs:
                 path: ./test-results
             - store_artifacts:
                 path: ./test-results
-  run-tests-e2e:
+  run-tests-unit:
     executor:
-      name: node/default    
+      name: node/default
     steps:
-      - cypress/run:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm run test:e2e
+            - store_test_results:
+                path: ./test-results
+            - store_artifacts:
+                path: ./test-results
   deploy-to-uat:
     executor:
       name: node/default
