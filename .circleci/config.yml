@@ -36,14 +36,10 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run test:unit
-  # run-tests-e2e:
-  #   executor:
-  #     name: cypress/run
-  #   steps:
-  #     - checkout
-  #     - cypress/run:
-  #         steps:
-  #           - run: npm run test:e2e
+            - persist_to_workspace:
+                root: ./test-results
+                paths:
+                  - test-unit.xml            
   deploy-to-uat:
     executor:
       name: node/default
@@ -62,15 +58,9 @@ jobs:
             - run: ./node_modules/.bin/vercel -c -t ${NOW_TOKEN} --prod
 
 workflows:
-    # build:
-    #   jobs:
-    #     - cypress/run 
     build-test-and-deploy:
       jobs:
         - build-artifact
-        - cypress/run:
-            requires:
-              - build-artifact
         - lint-code:
             requires:
               - build-artifact
@@ -84,15 +74,13 @@ workflows:
         - deploy-to-uat:
             requires:
               - run-tests-unit
-              # - run-tests-e2e             
-        # - run-tests-e2e:
-        #     requires:
-        #       - lint-code
-        #       - check-typescript
+        - cypress/run:
+            requires:
+              - deploy-to-uat
         - approve-uat:
             type: approval
             requires:
-              - deploy-to-uat
+              - cypress/run
         - deploy-to-prd:
             requires:
               - approve-uat
