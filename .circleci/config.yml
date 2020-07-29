@@ -40,18 +40,6 @@ jobs:
                 path: ./test-results
             - store_artifacts:
                 path: ./test-results
-  run-tests-e2e:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run: npm run test:e2e
-            - store_test_results:
-                path: ./test-results
-            - store_artifacts:
-                path: ./test-results
   deploy-to-uat:
     executor:
       name: node/default
@@ -89,13 +77,17 @@ workflows:
         - deploy-to-uat:
             requires:
               - run-tests-unit
-        # - cypress/run:
-        #     requires:
-        #       - deploy-to-uat
+        - cypress/run:
+            # requires:
+            #   - deploy-to-uat
+            - store_test_results:
+                path: ./test-results
+            - store_artifacts:
+                path: ./test-results            
         - approve-uat:
             type: approval
-            # requires:
-            #   - cypress/run
+            requires:
+              - cypress/run
         - deploy-to-prd:
             requires:
               - approve-uat
