@@ -36,10 +36,10 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run test:unit
-            - persist_to_workspace:
-                root: ./test-results
-                paths:
-                  - test-unit.xml            
+            - store_test_results:
+                path: ./test-results
+            - store_artifacts:
+                path: ./test-results
   deploy-to-uat:
     executor:
       name: node/default
