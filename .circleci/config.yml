@@ -52,7 +52,6 @@ workflows:
             requires:
               - test
         - approve-prd:
-            name: Approve deployment to Production
             type: approval
             requires:
               - deploy-uat
