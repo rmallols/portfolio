@@ -15,6 +15,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@typescript-eslint/parser": "^3.7.1",
     "animate.css": "^4.1.0",
+    "backstopjs": "^5.0.1",
     "chart.js": "^2.9.3",
     "cypress": "^4.11.0",
     "eslint": "^6.6.0",
@@ -28,6 +29,7 @@
     "react-router-dom": "^5.2.0",
     "react-router-transition": "^2.0.0",
     "react-scripts": "3.4.1",
+    "start-server-and-test": "^1.11.2",
     "typescript": "^3.9.7",
     "vercel": "^19.2.0"
   },
@@ -38,9 +40,11 @@
     "ts": "tsc",
     "test:unit": "react-scripts test --watchAll=false",
     "test:unit:watch": "react-scripts test",
-    "test:e2e": "cypress run",
+    "test:e2e": "BROWSER=none start-server-and-test start http-get://localhost:3006 _cy:run",
     "test:e2e:watch": "cypress open",
-    "eject": "react-scripts eject"
+    "test:visual": "backstop test",
+    "eject": "react-scripts eject",
+    "_cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"

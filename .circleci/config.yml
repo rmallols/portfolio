@@ -26,7 +26,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run ts            
-  run-unit-tests:
+  run-tests-unit:
     executor:
       name: node/default
     steps:
@@ -34,6 +34,14 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm run test:unit
+  run-tests-e2e:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm run test:e2e
   deploy-to-uat:
     executor:
       name: node/default
@@ -61,13 +69,18 @@ workflows:
         - check-typescript:
             requires:
               - build-artifact
-        - run-unit-tests:
+        - run-tests-unit:
+            requires:
+              - lint-code
+              - check-typescript
+        - run-tests-e2e:
             requires:
               - lint-code
               - check-typescript
         - deploy-to-uat:
             requires:
-              - run-unit-tests
+              - run-tests-unit
+              - run-tests-e2e
         - approve-uat:
             type: approval
             requires:
