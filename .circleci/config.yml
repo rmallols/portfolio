@@ -74,7 +74,7 @@ workflows:
     build-test-and-deploy:
       jobs:
         - build-artifact
-        - backstop/test
+        - backstop/visual-test
         - lint-code:
             requires:
               - build-artifact
