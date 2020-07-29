@@ -40,6 +40,9 @@ jobs:
                 path: ./test-results
             - store_artifacts:
                 path: ./test-results
+  run-tests-e2e:
+    steps:
+      - cypress/run:
   deploy-to-uat:
     executor:
       name: node/default
@@ -61,6 +64,9 @@ workflows:
     build-test-and-deploy:
       jobs:
         - build-artifact
+        - run-tests-e2e
+            requires:
+              - build-artifact        
         - lint-code:
             requires:
               - build-artifact
@@ -74,9 +80,9 @@ workflows:
         - deploy-to-uat:
             requires:
               - run-tests-unit
-        - cypress/run:
-            requires:
-              - deploy-to-uat
+        # - cypress/run:
+        #     requires:
+        #       - deploy-to-uat
         - approve-uat:
             type: approval
             requires:
