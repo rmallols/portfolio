@@ -60,7 +60,7 @@ jobs:
 workflows:
     build-test-and-deploy:
       jobs:
-        - build-artifact
+        - build-artifact:
             name: Build artifact
         - lint-code:
             name: Lint code
