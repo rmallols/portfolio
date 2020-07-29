@@ -20,7 +20,7 @@ jobs:
             - run: npm run lint
             - run: npm run ts
             - run: npm run test
-  deploy:
+  deploy-dev:
     executor:
       name: node/default
     steps:
@@ -28,6 +28,14 @@ jobs:
       - node/with-cache:
           steps:
             - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN}
+  deploy-prd:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN} --prod
 
 workflows:
     build-test-and-deploy:
@@ -36,7 +44,10 @@ workflows:
         - test:
             requires:
               - build
-        - deploy:
+        - deploy-dev:
             requires:
-              - build
-            #   - test
+              - test
+        - deploy-prd:
+            type: approval
+            requires:
+              - deploy-dev
