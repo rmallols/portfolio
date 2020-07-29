@@ -80,10 +80,11 @@ workflows:
         - cypress/run:
             # requires:
             #   - deploy-to-uat
-            - store_test_results:
-                path: ./test-results
-            - store_artifacts:
-                path: ./test-results            
+            post-steps:
+              - store_test_results:
+                  path: ./test-results
+              - store_artifacts:
+                  path: ./test-results 
         - approve-uat:
             type: approval
             requires:
