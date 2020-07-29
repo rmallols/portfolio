@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@1.1.6
 jobs:
   build:
-    name: Build artifact
+    description: Build artifact
     executor:
       name: node/default
     steps:
@@ -12,7 +12,7 @@ jobs:
           steps:
             - run: npm install
   test:
-    name: Run tests
+    description: Run tests
     executor:
       name: node/default
     steps:
@@ -23,7 +23,7 @@ jobs:
             - run: npm run ts
             - run: npm run test
   deploy-uat:
-    name: Deploy to User Acceptance Testing
+    description: Deploy to User Acceptance Testing
     executor:
       name: node/default
     steps:
@@ -32,7 +32,7 @@ jobs:
           steps:
             - run: ./node_modules/.bin/now -c -t ${NOW_TOKEN}
   deploy-prd:
-    name: Deploy to Production
+    description: Deploy to Production
     executor:
       name: node/default
     steps:
