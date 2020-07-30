@@ -3,7 +3,7 @@ import { get } from '../utils/selectors';
 context('Navigation', () => {
 
     before(() => {
-        cy.visit(Cypress.config().baseUrl);
+        cy.visit(Cypress.env('host'));
     });
 
     beforeEach(() => {
@@ -81,7 +81,7 @@ context('Navigation', () => {
     describe('logo navigation', () => {
 
         it('returns to the home page by clicking on the logo', () => {
-            const targetUrl = `${Cypress.config().baseUrl}/`;
+            const targetUrl = `${Cypress.env('host')}/`;
             cy.url().should('not.eq', targetUrl);
             get('HeaderLogo').click();
             cy.url().should('eq', targetUrl);

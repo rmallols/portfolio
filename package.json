@@ -40,9 +40,9 @@
     "ts": "tsc",
     "test:unit": "JEST_JUNIT_OUTPUT_NAME=./test-results/test-unit.xml react-scripts test --watchAll=false --reporters=jest-junit",
     "test:unit:watch": "react-scripts test",
-    "test:e2e": "CYPRESS_BASE_URL=https://portfolio.rmallols.vercel.app cypress run",
-    "test:e2e:local": "CYPRESS_BASE_URL=http://localhost:3006 cypress run",
-    "test:e2e:local:watch": "CYPRESS_BASE_URL=http://localhost:3006 cypress open",
+    "test:e2e": "cypress run --env host=https://portfolio.rmallols.vercel.app",
+    "test:e2e:local": "cypress run --env host=http://localhost:3006",
+    "test:e2e:local:watch": "cypress open --env host=https://portfolio.rmallols.vercel.app",
     "test:visual:reference": "backstop reference",
     "test:visual:test": "backstop test",
     "eject": "react-scripts eject"
