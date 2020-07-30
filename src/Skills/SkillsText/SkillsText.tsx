@@ -5,7 +5,7 @@ export default function SkillsText() {
         <div className="SkillsText is-text">
             <p>
                 <label className="is-color-pink" data-testid="SkillsText-title">
-                    <h6>I love JavaScript!</h6>
+                    I love JavaScript!
                 </label>
                 <br />
                 I've been using it commercially for 15+ years, Not just in
