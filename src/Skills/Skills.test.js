@@ -2,15 +2,18 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Skills from './Skills';
 
-test('renders some text', () => {
+describe('Skills component', () => {
 
-    // given
-    const { getByTestId } = render(<Skills />);
-    const expectedText = 'I’m a highly proficient Javascript';
+    test('renders some text', () => {
 
-    // when
-    const titleElement = getByTestId('SkillsText-title');
+        // given
+        const { getByTestId } = render(<Skills />);
+        const expectedText = 'I’m a highly proficient Javascript';
 
-    // then
-    expect(titleElement.textContent).toBe('I love JavaScript!');  
+        // when
+        const titleElement = getByTestId('SkillsText-title');
+
+        // then
+        expect(titleElement.textContent).toBe('I love JavaScript!');
+    });
 });

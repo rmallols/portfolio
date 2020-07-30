@@ -32,8 +32,12 @@ function ExperienceCompany({ experience, index }) {
             <div className="details">
                 <div className="position">
                     <div>
-                        <div className="is-color-cyan">Company</div>
-                        <h6>{experience.company}</h6>
+                        <div className="is-color-cyan">
+                            Company
+                        </div>
+                        <h6 data-testid="ExperienceCompany-title">
+                            {experience.company}
+                        </h6>
                     </div>
                     <div>
                         <div className="is-color-cyan">Position</div>
