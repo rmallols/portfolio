@@ -81,7 +81,7 @@ context('Navigation', () => {
     describe('logo navigation', () => {
 
         it('returns to the home page by clicking on the logo', () => {
-            const targetUrl = `${Cypress.env('host')}/`;
+            const targetUrl = `${Cypress.config().baseUrl}/`;
             cy.url().should('not.eq', targetUrl);
             get('HeaderLogo').click();
             cy.url().should('eq', targetUrl);

@@ -92,8 +92,7 @@ workflows:
               - run-tests-unit
         - cypress/run:
             requires:
-            #   - deploy-to-uat
-              - build-artifact
+              - deploy-to-uat
             post-steps:
               - store_test_results:
                   path: ./test-results
