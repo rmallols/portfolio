@@ -94,6 +94,7 @@ workflows:
             requires:
             #   - deploy-to-uat
               - build-artifact
+            baseUrl: https://portfolio.rmallols.vercel.app
             post-steps:
               - store_test_results:
                   path: ./test-results
