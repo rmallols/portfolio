@@ -3,7 +3,7 @@ import { get } from '../utils/selectors';
 context('Navigation', () => {
 
     before(() => {
-        cy.visit('/');
+        cy.visit(Cypress.config().baseUrl);
     });
 
     beforeEach(() => {
