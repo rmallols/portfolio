@@ -20,7 +20,7 @@ export default function Community() {
                     </div>
                 ))}
             </div>
-            <div className="text is-text">
+            <div className="text is-text" data-testid="Community-text">
                 <p>
                     I love to connect with other coding enthusiasts! I'm a
                     developer advocate who is always trying to learn from his
@@ -49,7 +49,6 @@ export default function Community() {
                     organised different Book Clubs about coding in different
                     European countries.
                 </p>
-                {/* <img src={CommunityMeetupLogo} /> */}
             </div>
         </div>
     );

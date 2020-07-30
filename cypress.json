@@ -1,5 +1,8 @@
 {
+    "baseUrl": "http://localhost:3006",
     "video": false,
+    "viewportHeight": 800,
+    "viewportWidth": 1280,
     "reporter": "junit",
     "reporterOptions": {
       "mochaFile": "test-results/test-e2e.xml",

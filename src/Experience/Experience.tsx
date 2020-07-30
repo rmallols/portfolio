@@ -4,19 +4,24 @@ import experienceList, { Experience as IExperience } from './experienceList';
 export default function Experience() {
     return (
         <div className="companiesWrapper">
-            {experienceList.map((experience: IExperience) => (
-                <div key={experience.company}>
-                    <ExperienceCompany experience={experience} />
-                </div>
+            {experienceList.map((experience: IExperience, index: number) => (
+                <ExperienceCompany
+                    experience={experience}
+                    index={index}
+                    key={experience.company}
+                />
             ))}
         </div>
     );
 }
 
 // @ts-ignore: TODO: IntrinsicAttributes
-function ExperienceCompany({ experience }) {
+function ExperienceCompany({ experience, index }) {
     return (
-        <div className="ExperienceCompany">
+        <div
+            className="ExperienceCompany"
+            data-testid={`ExperienceCompany-${index}`}
+        >
             <div className="logoWrapper">
                 {typeof experience.logo === 'string' ? (
                     <i className={`logo ${experience.logo}`} />

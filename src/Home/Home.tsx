@@ -24,13 +24,15 @@ export default function Home() {
         <>
             <div className="welcome">
                 <h1
-                    data-testid="title"
-                    className="title animate__animated animate__bounceInDown">
+                    data-testid="Home-title"
+                    className="title animate__animated animate__bounceInDown"
+                >
                     Hi!
                 </h1>
                 <h5
-                    data-testid="subtitle"
-                    className="animate__animated animate__bounceInUp">
+                    data-testid="Home-subtitle"
+                    className="animate__animated animate__bounceInUp"
+                >
                     I'm a <label className="is-color-pink">passionate</label>
                     <br />
                     full-stack{' '}

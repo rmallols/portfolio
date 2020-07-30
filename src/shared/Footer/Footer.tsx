@@ -14,6 +14,9 @@ export default function Footer({ to, text, isExternal }: LinkProps) {
                     'animate__lightSpeedInLeft',
                     'animate__delay-1s',
                 ].join(' ')}
+                // We have to pass the data-testid attribute in camelCase
+                // because of compatibility reasons with TypeScript
+                dataTestid="Footer-link"
             />
         </footer>
     );

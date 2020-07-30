@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function AboutMe() {
     return (
-        <div className="is-text">
+        <div className="is-text" data-testid="AboutMe">
             <p>
                 I'm a{' '}
                 <label className="is-color-pink">
-                    Software Enginner with 18 years of programming experience
+                    Software Engineer with 18 years of programming experience
                 </label>
                 . I’m a highly proficient Javascript / React / Angular
                 developer, interested on standards, efficiency, automated

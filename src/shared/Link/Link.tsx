@@ -6,22 +6,22 @@ export default function Link({
     text,
     isExternal,
     className,
+    dataTestid,
     onClick,
 }: LinkProps) {
     const onLinkClicked = (e: React.MouseEvent) => onClick && onClick(e);
+    const baseArgs = {
+        className,
+        onClick: onLinkClicked,
+        'data-testid': dataTestid,
+    };
 
     return isExternal ? (
-        <a
-            href={to}
-            className={className}
-            onClick={onLinkClicked}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a {...baseArgs} href={to} target="_blank" rel="noopener noreferrer">
             {text}
         </a>
     ) : (
-        <ReactLink to={to} className={className} onClick={onLinkClicked}>
+        <ReactLink {...baseArgs} to={to}>
             {text}
         </ReactLink>
     );
@@ -32,5 +32,6 @@ export interface LinkProps {
     text: string;
     isExternal: boolean;
     className?: string;
+    dataTestid?: string;
     onClick?: (event: React.MouseEvent) => void;
 }

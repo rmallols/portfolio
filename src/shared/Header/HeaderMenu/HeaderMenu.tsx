@@ -8,7 +8,7 @@ export default function HeaderMenu() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="HeaderMenu">
+        <div className="HeaderMenu" data-testid="HeaderMenu">
             <HeaderMenuNav isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
             <div className={`links ${isOpen ? 'is-open' : ''}`}>
                 {routesList.map((route) => (

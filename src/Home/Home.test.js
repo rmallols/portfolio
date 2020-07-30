@@ -9,7 +9,7 @@ test('renders the welcome title', () => {
     const { getByTestId } = render(<Home />);
 
     //when
-    const titleElement = getByTestId('title');
+    const titleElement = getByTestId('Home-title');
 
     //then
     expect(titleElement.textContent).toBe('Hi!');  
@@ -21,7 +21,7 @@ test('renders the welcome subtitle', () => {
     const { getByTestId } = render(<Home />);
 
     //when
-    const subtitleElement = getByTestId('subtitle');
+    const subtitleElement = getByTestId('Home-subtitle');
 
     //then
     expect(subtitleElement.textContent).toBe(

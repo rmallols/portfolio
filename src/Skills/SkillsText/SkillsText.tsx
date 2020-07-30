@@ -4,7 +4,7 @@ export default function SkillsText() {
     return (
         <div className="SkillsText is-text">
             <p>
-                <label className="is-color-pink">
+                <label className="is-color-pink" data-testid="SkillsText-title">
                     <h6>I love JavaScript!</h6>
                 </label>
                 <br />
