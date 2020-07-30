@@ -87,6 +87,10 @@ workflows:
             requires:
               - lint-code
               - check-typescript
+            filters:
+              branches:
+                only:
+                  - master              
         - deploy-to-uat:
             requires:
               - run-tests-unit
@@ -105,6 +109,10 @@ workflows:
         - bump-version:
             requires:
               - approve-uat
+            filters:
+              branches:
+                only:
+                  - master
         - deploy-to-prd:
             requires:
               - bump-version
