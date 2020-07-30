@@ -3,6 +3,8 @@ import { get } from '../utils/selectors';
 context('Navigation', () => {
 
     before(() => {
+        cy.log('AAA');
+        console.log('BBB');
         cy.visit(Cypress.env('host'));
     });
 
@@ -33,7 +35,7 @@ context('Navigation', () => {
     const getLink = index => get('HeaderMenu').find('a').eq(index);
     const getNextRoute = index => routes[index + 1];
 
-    describe('internal navigation', () => {
+    describe(`internal navigation - ${Cypress.env('host')} - ${Cypress.config().baseUrl}`, () => {
 
         routes
             .slice(0, routes.length - 1)
