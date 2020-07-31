@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function ExperienceKodiriLogo() {
+export default function ExperienceCompanyKodiriLogo() {
     return (
-        <div className="ExperienceKodiriLogo">
+        <div className="ExperienceCompanyKodiriLogo">
             <div className="content">
                 <i className="icon_pentagon1" />
                 <i className="icon_pentagon2" />

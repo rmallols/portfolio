@@ -15,18 +15,29 @@ context('Navigation', () => {
     });
 
     const routes = [{
-        text: 'Home', path: '/', selector: 'Home-title', contains: 'Hi!'
+        text: 'Home',
+        path: '/',
+        getSelector: () => get('Home-title'),
+        contains: 'Hi!'
     }, {
-        text: 'About me', path: '/about-me', selector: 'AboutMe',
+        text: 'About me',
+        path: '/about-me',
+        getSelector: () => get('AboutMe'),
         contains: 'I\'m a Software Engineer'
     }, {
-        text: 'Skills', path: '/skills', selector: 'SkillsText-title',
+        text: 'Skills',
+        path: '/skills',
+        getSelector: () => get('SkillsText-title'),
         contains: 'I love JavaScript!'
     }, {
-        text: 'Experience', path: '/experience',
-        selector: 'ExperienceCompany-0', contains: 'Kodiri'
+        text: 'Experience',
+        path: '/experience',
+        getSelector: () => get('ExperienceCompany').eq(0),
+        contains: 'Kodiri'
     }, {
-        text: 'Community', path: '/community', selector: 'Community-text',
+        text: 'Community',
+        path: '/community',
+        getSelector: () => get('Community-text'),
         contains: 'I love to connect with other coding enthusiasts!'
     }];
 
@@ -37,12 +48,12 @@ context('Navigation', () => {
 
         routes
             .slice(0, routes.length - 1)
-            .forEach(({ text, path, selector, contains }, index) => {
+            .forEach(({ text, path, getSelector, contains }, index) => {
 
                 describe(`${text} view`, () => {
 
                     it('displays the link as active', () => {
-                        get(selector).contains(contains);
+                        getSelector().contains(contains);
                         getLink(index).contains(text);
                         getLink(index)
                             .should('have.attr', 'href')
