@@ -7,7 +7,7 @@ export default function AboutMe() {
                 I'm a{' '}
                 <label className="is-color-pink">
                     Software Engineer with 18 years of programming experience.
-                </label>
+                </label>&nbsp;
                 I’m a highly proficient Javascript / React / Angular developer,
                 interested in standards, efficiency, automated testing and
                 UI/UX.
@@ -28,12 +28,12 @@ export default function AboutMe() {
                 knowledge and continuously learning from my environment.
             </p>
             <p>
-                I have been working for multiple companies and customers in the{' '}
+                I have been working for multiple companies and customers in the 
+                UK, Germany, Switzerland and Spain. I’m focused on&nbsp;
                 <label className="is-color-yellow">
-                    UK, Germany, Switzerland and Spain.
-                </label>
-                &nbsp; I’m focused on supporting underprivileged and
-                underrepresented communities with their coding skills
+                    supporting underprivileged and
+                    underrepresented communities                   
+                </label> with their coding skills.
             </p>
         </div>
     );

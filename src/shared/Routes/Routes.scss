@@ -20,7 +20,7 @@
         &:before {
             $line-width: 3px;
             @include overlay(-1);
-            background-color: transparentize($charade-color, 0.03);
+            background-color: transparentize($charade-color, 0.02);
             top: auto;
             position: fixed;
             bottom: 100%;

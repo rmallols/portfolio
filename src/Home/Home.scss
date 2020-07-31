@@ -27,11 +27,12 @@
 
     .codeWrapper {
         display: none;
-        align-items: center;
+        align-items: center;        
     }
 
     .Code {
         grid-area: Code;
+        grid-template-areas: ". Code";
     }
 
     @media (min-width: $mobile-width) and (orientation:landscape) {
@@ -42,8 +43,6 @@
     }
 
     @media (min-width: $mobile-width) {
-
-
 
         .codeWrapper {
             display: grid;
@@ -62,6 +61,10 @@
         .welcome {
             grid-gap: 145px;
             text-align: right;
+        }
+
+        .codeWrapper {
+            grid-template-areas: "Code";
         }
     }
 }

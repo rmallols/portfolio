@@ -1,4 +1,4 @@
-import Chart from 'chart.js';
+import Chart, { ChartTooltipItem, ChartData } from 'chart.js';
 
 const baseColor = '#50fa7b';
 
@@ -20,13 +20,18 @@ function getChartData() {
             'Less/Sass',
             'React',
             'Vue',
+            'TypeScript',
             'Node/Express',
             'MongoDB',
+            'Testing',
+            'CI/CD',
             'Cloud',
+            'Methodologies',
+            'Design',
         ],
         datasets: [
             {
-                data: [90, 80, 80, 85, 70, 50, 70, 75, 80],
+                data: [90, 80, 85, 85, 85, 55, 60, 70, 75, 80, 75, 80, 85, 80],
                 borderColor: baseColor,
                 backgroundColor: getAlphaColor(baseColor),
                 borderWidth: 5,
@@ -52,6 +57,14 @@ function getChartOptions() {
         },
         legend: { display: false },
         animation: { duration: 1500 },
+        tooltips: {
+            callbacks: {
+                title: (tooltipItem: ChartTooltipItem[], data: ChartData) => (
+                    // @ts-ignore: Unreachable code error
+                    data.labels[tooltipItem[0].index]
+                )
+            }
+        }
     };
 }
 
