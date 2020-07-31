@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCompany from './ExperienceCompany';
+import mimacomLogo from './logos/mimacom.svg';
 
 export default function ExperienceCompanyMimacom() {
     return (
         <ExperienceCompany
             company="Mimacom AG"
-            logo="logo_mimacom"
+            logo={<img src={mimacomLogo} />}
             position="Frontend Developer"
             period="Oct 2009 - Oct 2011"
             stack="Javascript, jQuery, WebScript, HTML, CSS, Liferay Portal, Alfresco ECM."

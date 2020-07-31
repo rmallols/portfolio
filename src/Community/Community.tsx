@@ -20,32 +20,44 @@ export default function Community() {
                     </div>
                 ))}
             </div>
-            <div className="text is-text" data-testid="Community-text">
+            <div className="text is-text">
+                <p className="h6 is-color-pink" data-testid="Community-text">
+                    I love to getting involved with coding communities!
+                </p>
                 <p>
-                    I love to connect with other coding enthusiasts! I'm a
+                    I'm a
                     developer advocate who is always trying to learn from his
                     environment while helping others with their coding skills,
-                    with a special focus on helping underprivileged and
-                    underrepresented groups with their programming skills.
+                    with a special focus on{' '}
+                    <label className="is-color-yellow">
+                        helping underprivileged and underrepresented groups
+                    </label> with their programming skills.
                 </p>
                 <p>
                     I'm the organiser of{' '}
-                    <a href="https://www.meetup.com/kodiri">Kodiri</a>, one of
-                    the largest tech groups in the UK with ~8K members. At
-                    Kodiri with play with coding related topics, we've
+                    <a href="https://www.meetup.com/kodiri">Kodiri</a>,
+                    <label className="is-color-yellow">{' '}
+                        one of the largest tech groups in the UK
+                    </label> with ~8K members. At
+                    Kodiri with play with multiple coding topics and we've
                     celebrated 100+ free events to date in collaboration with
-                    some of top tech companies and speakers.
+                    some of the top tech companies and speakers.
                 </p>
                 <p>
                     I also run a small{' '}
-                    <a href="https://www.youtube.com/kodiri">YouTube channel</a>
-                    &nbsp; with hundreds of free video tutorials about coding,
+                    <a href="https://www.youtube.com/kodiri">YouTube channel</a>{' '}
+                    <label className="is-color-yellow">{' '}
+                        with hundreds of free video tutorials about coding
+                    </label>{' '}
                     live recorded to ensuring that the learning experience
                     remains natural by e.g. dealing with unexpected problems.
                 </p>
                 <p>
-                    Through my career, I've participated in many coding
-                    conferences -both as a speaker and listener- and I've
+                    Through my career,
+                    <label className="is-color-yellow">{' '}
+                        I've participated in many coding conferences
+                    </label>                    
+                    - both as a speaker and listener- and I've
                     organised different Book Clubs about coding in different
                     European countries.
                 </p>

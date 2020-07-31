@@ -1,6 +1,6 @@
 .ExperienceCompanyKodiriLogo {
     position: relative;
-    height: 100%;
+    height: 150px;
 
     @mixin show($delay) {
         animation-delay: $delay;
@@ -28,7 +28,7 @@
             width: 100%;
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: bottom;
             will-change: opacity, transform;
             animation-name: show;
             animation-duration: $animation-duration;
@@ -43,4 +43,14 @@
     .icon_pentagon1 { background-image: url('./icons/pentagon1.svg'); }
     .icon_pentagon2 { background-image: url('./icons/pentagon2.svg'); }
     .icon_pentagon3 { background-image: url('./icons/pentagon3.svg'); }
+
+    @media (min-width: $tablet-width) {
+
+        .content {
+
+            i {
+                background-position: center;
+            }
+        }
+    }
 }

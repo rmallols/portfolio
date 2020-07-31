@@ -1,9 +1,12 @@
 footer {
     height: $footer-height;
     display: grid;
-    align-items: center;
+    align-items: end;
+    margin-bottom: 1px;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $mobile-width) {
         justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
     }
 }

@@ -21,7 +21,7 @@ function getChartData() {
             'React',
             'Vue',
             'TypeScript',
-            'Node/Express',
+            'Node',
             'MongoDB',
             'Testing',
             'CI/CD',

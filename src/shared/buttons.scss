@@ -9,9 +9,12 @@ button,
     cursor: pointer;
     text-decoration: none;
 
-    &:hover {
-        transition: background-color $animation-type $animation-duration;
-        background-color: $cyan-color;
-        color: $charade-color;
+    @media (min-width: $tablet-width) {
+
+        &:hover {
+            transition: background-color $animation-type $animation-duration;
+            background-color: $cyan-color;
+            color: $charade-color;
+        }
     }
 }

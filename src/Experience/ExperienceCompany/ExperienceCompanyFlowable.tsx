@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCompany from './ExperienceCompany';
+import flowableLogo from './logos/flowable.svg';
 
 export default function ExperienceCompanyFlowable() {
     return (
         <ExperienceCompany
             company="Flowable AG"
-            logo="logo_flowable"
+            logo={<img src={flowableLogo} />}
             position="Frontend Developer"
             period="Oct 2011 - May 2014"
             stack="Javascript, AngularJS, jQuery, HTML5, CSS3, Less, Jasmine, Karma, GruntJs, TeamCity."

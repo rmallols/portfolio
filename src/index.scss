@@ -37,6 +37,7 @@ main {
     display: grid;
     overflow: auto;
     margin: 0 auto;
+    padding: 0 15px;
     width: 100%;
 }
 
@@ -57,12 +58,12 @@ p {
     &:last-of-type { margin-bottom: 0; }
 }
 
-h1 { @include heading(6rem); }
-h2 { @include heading(5rem); }
-h3 { @include heading(4rem); }
-h4 { @include heading(3rem); }
-h5 { @include heading(2rem); }
-h6 { @include heading(1.25rem); }
+h1, .h1 { @include heading(6rem); }
+h2, .h2 { @include heading(5rem); }
+h3, .h3 { @include heading(4rem); }
+h4, .h4 { @include heading(3rem); }
+h5, .h5 { @include heading(2rem); }
+h6, .h6 { @include heading(1.25rem); }
 
 iframe {
     border: none;
@@ -73,5 +74,13 @@ iframe {
     main {
         align-content: center;
         height: $available-height;
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: $desktop-large-width) {
+
+    body {
+        font-size: 24px;
     }
 }

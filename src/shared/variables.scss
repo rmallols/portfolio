@@ -20,7 +20,9 @@ $available-height: calc(#{var(--vh, 1vh)} - #{$header-height + $footer-height});
 $available-height_mobile: calc(#{var(--vh, 1vh)} - #{$header-height_mobile});
 
 $image-height_mobile: calc(100vw * 0.6);
+$image-height_tablet: calc(100vw * 0.4);
 
 $mobile-width: 650px;
 $tablet-width: 900px;
 $desktop-width: 1200px;
+$desktop-large-width: 1400px;

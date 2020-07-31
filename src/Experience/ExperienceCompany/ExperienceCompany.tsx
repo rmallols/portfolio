@@ -9,16 +9,11 @@ export default function ExperienceCompany({
     period,
     stack,
     details,
+    achievements
 }: ExperienceCompany) {
     return (
         <div className="ExperienceCompany" data-testid="ExperienceCompany">
-            <div className="logoWrapper">
-                {typeof logo === 'string' ? (
-                    <i className={`logo ${logo}`} />
-                ) : (
-                    logo
-                )}
-            </div>
+            <div className="logoWrapper">{logo}</div>
             <div className="details">
                 <div className="position">
                     <div>
@@ -42,6 +37,13 @@ export default function ExperienceCompany({
                     <div className="is-color-cyan">Details</div>
                     {details}
                 </div>
+                {
+                    achievements &&
+                    <div>
+                        <div className="is-color-cyan">Achievements</div>
+                        {achievements}
+                    </div>
+                }
             </div>
         </div>
     );
@@ -49,9 +51,10 @@ export default function ExperienceCompany({
 
 interface ExperienceCompany {
     company: string;
-    logo: JSX.Element | string;
+    logo: JSX.Element;
     position: string;
     period: string;
     stack: string;
     details: JSX.Element;
+    achievements?: JSX.Element;
 }

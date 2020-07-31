@@ -54,6 +54,21 @@ export default function ExperienceCompanyKodiri() {
                     </p>
                 </>
             }
+            achievements={
+                <p>
+                    Became the most active code learning platform built in Europe.
+                    <br />
+                    Celebrated the largest{' '}
+                    <a
+                        href="https://www.youtube.com/watch?v=rQlMdTFl94s"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        coding event
+                    </a>{' '}
+                    in the UK on the Meetup platform (2019).
+                </p>
+            }
         />
     );
 }

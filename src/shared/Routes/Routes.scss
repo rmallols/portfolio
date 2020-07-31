@@ -65,9 +65,8 @@
 
                 .wrapper {
                     display: grid;
-                    align-items: end;
                     margin-top: $header-height_mobile;
-                    padding: 0 15px;
+                    padding: 0;
                     height: $available-height_mobile;
                     overflow-y: auto;
                     animation-name: show-content;
@@ -87,7 +86,8 @@
                     .wrapper {
                         margin-top: 0;
                         height: 100vh;
-                        padding: $header-height 30px 0 30px;
+                        align-items: end;
+                        padding-top: $header-height;
                     }
                 }
             }

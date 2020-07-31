@@ -6,18 +6,18 @@ export default function Home() {
 
     it('fetches some details about R. Mallols,', () => {
 
-        //given
+        // given
         const devDetails = { id: 'rmallols' };
 
-        //when
+        // when
         const { 
             loves, learning, favAnimal 
         } = getDevDetails(devDetails);
 
-        //then
-        expect(loves).to.equal('React');
-        expect(learning).to.deep.equal(['Deno', 'Vue3']);
-        expect(favAnimal).to.equal('Sharktopus');
+        // then
+        expect(loves).toBe('React');
+        expect(learning).toEqual(['Deno', 'Vue3']);
+        expect(favAnimal).toBe('Crocosaurus');
     });
 });`;
     return (

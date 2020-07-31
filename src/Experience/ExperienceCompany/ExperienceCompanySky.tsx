@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCompany from './ExperienceCompany';
+import skyLogo from './logos/sky.svg';
 
 export default function ExperienceCompanySky() {
     return (
         <ExperienceCompany
             company="Sky TV"
-            logo="logo_sky"
+            logo={<img src={skyLogo} />}
             position="Senior Software Developer"
             period="May 2014 - Feb 2016"
             stack="Javascript, Angular, jQuery, HTML5, CSS3, SASS, Groovy, Jasmine, Karma, Sinon, Grunt, Bower, Jenkins."
@@ -33,6 +34,20 @@ export default function ExperienceCompanySky() {
                         company.
                     </p>
                 </>
+            }
+            achievements={
+                <p>
+                    Received 2 “Believe in Better” awards.
+                    <br />
+                    <a
+                            href="https://www.youtube.com/watch?v=TPNOrSAb8Wk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Presented the new open source components
+                    </a>{' '}
+                    at a Google-backed international JavaScript conference.
+                </p>
             }
         />
     );

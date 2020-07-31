@@ -38,7 +38,7 @@ context('Navigation', () => {
         text: 'Community',
         path: '/community',
         getSelector: () => get('Community-text'),
-        contains: 'I love to connect with other coding enthusiasts!'
+        contains: 'I love to getting involved with coding communities!'
     }];
 
     const getLink = index => get('HeaderMenu').find('a').eq(index);

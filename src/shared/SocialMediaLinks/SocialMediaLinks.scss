@@ -22,7 +22,7 @@
         &.is-github { background-image: url('./logos/github.svg'); }
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $mobile-width) {
         display: grid;
     }
 }

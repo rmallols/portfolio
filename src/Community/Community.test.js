@@ -15,7 +15,7 @@ describe('Community component', () => {
 
         // then
         expect(titleElement.textContent.includes(
-            'I love to connect with other coding enthusiasts!'
+            'I love to getting involved with coding communities!'
         )).toBe(true);
     });
 });

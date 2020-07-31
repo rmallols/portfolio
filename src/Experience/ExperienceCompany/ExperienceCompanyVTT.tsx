@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCompany from './ExperienceCompany';
+import vttLogo from './logos/vtt.svg';
 
 export default function ExperienceCompanyVTT() {
     return (
         <ExperienceCompany
             company="VTT"
-            logo="logo_vtt"
+            logo={<img src={vttLogo} />}
             position="Founder"
             period="Mar 2002 - Dec 2005"
             stack="Javascript, HTML, CSS."

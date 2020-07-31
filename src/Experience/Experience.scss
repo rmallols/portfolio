@@ -16,6 +16,7 @@
     .companiesWrapper {            
         margin: 0 auto;
         display: grid;
+        grid-gap: 45px;
     }
 
     .ExperienceCompany {
@@ -24,12 +25,20 @@
     }
 
     .logoWrapper {
-        height: $image-height_mobile;
+        height: fit-content;
+        margin: 10px 0 15px 0;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 300px;
+        }
     }
 
     .details {
         display: grid;
         grid-gap: 15px;
+        align-content: flex-start;
     }
 
     .position {
@@ -38,29 +47,11 @@
     }
 
     p {
-        margin: 5px 0;
-        line-height: 1.5;
+        margin: 15px 0;
 
         &:first-of-type {
             margin-top: 0;
         }
-    }
-
-    .logo {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-
-        &.logo_hsbc         { background-image: url('./logos/hsbc.svg'); }
-        &.logo_sky          { background-image: url('./logos/sky.svg'); }
-        &.logo_flowable     { background-image: url('./logos/flowable.svg'); }
-        &.logo_mimacom      { background-image: url('./logos/mimacom.svg'); }
-        &.logo_palluc       { background-image: url('./logos/palluc.svg'); }
-        &.logo_ever         { background-image: url('./logos/ever.svg'); }
-        &.logo_vtt          { background-image: url('./logos/vtt.svg'); }
     }
 
     @media (min-width: $mobile-width) {
@@ -70,8 +61,7 @@
         }
     }
 
-    @media (min-width: $tablet-width) {
-        $logo-width: 400px;
+    @mixin experience-layout($logo-width) {
 
         .companiesWrapper {
             max-width: $logo-width + $max-text-width;
@@ -81,9 +71,17 @@
         .ExperienceCompany {
             grid-template-columns: $logo-width 1fr;
         }
+    }
+
+    @media (min-width: $tablet-width) {
+        @include experience-layout(300px);
 
         .logoWrapper {
-            height: auto;
+            margin: 0;
         }
+    }
+
+    @media (min-width: $desktop-width) {
+        @include experience-layout(400px);
     }
 }

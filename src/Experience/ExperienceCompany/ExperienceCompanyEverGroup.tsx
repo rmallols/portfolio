@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCompany from './ExperienceCompany';
+import everGroupLogo from './logos/ever.svg';
 
 export default function ExperienceCompanyEverGroup() {
     return (
         <ExperienceCompany
             company="Grupo Ever Group"
-            logo="logo_ever"
+            logo={<img src={everGroupLogo} />}
             position="Frontend Developer"
             period="Dec 2005 - Sep 2006"
             stack="Javascript, ActionScript, HTML, CSS."
