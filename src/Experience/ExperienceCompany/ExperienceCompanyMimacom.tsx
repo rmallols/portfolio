@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import mimacomLogo from './logos/mimacom.svg';
 
 export default function ExperienceCompanyMimacom() {
+    const company = 'Mimacom AG';
     return (
         <ExperienceCompany
-            company="Mimacom AG"
-            logo={<img src={mimacomLogo} />}
+            company={company}
+            logo={<img src={mimacomLogo} alt={`${company} logo`} />}
             position="Frontend Developer"
             period="Oct 2009 - Oct 2011"
             stack="Javascript, jQuery, WebScript, HTML, CSS, Liferay Portal, Alfresco ECM."

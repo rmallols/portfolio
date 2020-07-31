@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import everGroupLogo from './logos/ever.svg';
 
 export default function ExperienceCompanyEverGroup() {
+    const company = 'Grupo Ever Group';
     return (
         <ExperienceCompany
-            company="Grupo Ever Group"
-            logo={<img src={everGroupLogo} />}
+            company={company}
+            logo={<img src={everGroupLogo} alt={`${company} logo`} />}
             position="Frontend Developer"
             period="Dec 2005 - Sep 2006"
             stack="Javascript, ActionScript, HTML, CSS."

@@ -59,12 +59,11 @@ function getChartOptions() {
         animation: { duration: 1500 },
         tooltips: {
             callbacks: {
-                title: (tooltipItem: ChartTooltipItem[], data: ChartData) => (
+                title: (tooltipItem: ChartTooltipItem[], data: ChartData) =>
                     // @ts-ignore: Unreachable code error
-                    data.labels[tooltipItem[0].index]
-                )
-            }
-        }
+                    data.labels[tooltipItem[0].index],
+            },
+        },
     };
 }
 

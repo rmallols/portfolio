@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import flowableLogo from './logos/flowable.svg';
 
 export default function ExperienceCompanyFlowable() {
+    const company = 'FLowable AG';
     return (
         <ExperienceCompany
-            company="Flowable AG"
-            logo={<img src={flowableLogo} />}
+            company={company}
+            logo={<img src={flowableLogo} alt={`${company} logo`} />}
             position="Frontend Developer"
             period="Oct 2011 - May 2014"
             stack="Javascript, AngularJS, jQuery, HTML5, CSS3, Less, Jasmine, Karma, GruntJs, TeamCity."

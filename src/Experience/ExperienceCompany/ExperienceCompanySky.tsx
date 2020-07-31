@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import skyLogo from './logos/sky.svg';
 
 export default function ExperienceCompanySky() {
+    const company = 'Sky TV';
     return (
         <ExperienceCompany
-            company="Sky TV"
-            logo={<img src={skyLogo} />}
+            company={company}
+            logo={<img src={skyLogo} alt={`${company} logo`} />}
             position="Senior Software Developer"
             period="May 2014 - Feb 2016"
             stack="Javascript, Angular, jQuery, HTML5, CSS3, SASS, Groovy, Jasmine, Karma, Sinon, Grunt, Bower, Jenkins."
@@ -40,11 +41,11 @@ export default function ExperienceCompanySky() {
                     Received 2 “Believe in Better” awards.
                     <br />
                     <a
-                            href="https://www.youtube.com/watch?v=TPNOrSAb8Wk"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Presented the new open source components
+                        href="https://www.youtube.com/watch?v=TPNOrSAb8Wk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Presented the new open source components
                     </a>{' '}
                     at a Google-backed international JavaScript conference.
                 </p>

@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import hsbcLogo from './logos/hsbc.svg';
 
 export default function ExperienceCompanyHSBC() {
+    const company = 'HSBC';
     return (
         <ExperienceCompany
-            company="HSBC"
-            logo={<img src={hsbcLogo} />}
+            company={company}
+            logo={<img src={hsbcLogo} alt={`${company} logo`} />}
             position="Senior Software Developer"
             period="Apr 2016 - Apr 2018"
             stack="Javascript/ES6+, Angular4, React, Vue2, Typescript, Rx, Jasmine, Karma, Protractor."
@@ -31,7 +32,8 @@ export default function ExperienceCompanyHSBC() {
                 <p>
                     Ranked #3 most productive employees (top 0.3%) in 2017.
                     <br />
-                    Improved performance of legacy trading apps by ~50% (loading times, CPU & memory usage).
+                    Improved performance of legacy trading apps by ~50% (loading
+                    times, CPU & memory usage).
                 </p>
             }
         />

@@ -56,7 +56,8 @@ export default function ExperienceCompanyKodiri() {
             }
             achievements={
                 <p>
-                    Became the most active code learning platform built in Europe.
+                    Became the most active code learning platform built in
+                    Europe.
                     <br />
                     Celebrated the largest{' '}
                     <a

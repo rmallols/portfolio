@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import pallucLogo from './logos/palluc.svg';
 
 export default function ExperienceCompanyPalluc() {
+    const company = 'Grupo Palluc';
     return (
         <ExperienceCompany
-            company="Grupo Palluc"
-            logo={<img src={pallucLogo} />}
+            company={company}
+            logo={<img src={pallucLogo} alt={`${company} logo`} />}
             position="Frontend Developer"
             period="Sep 2006 - Oct 2009"
             stack="Javascript, jQuery, HTML, CSS, Liferay Portal, Joomla Portal, Alfresco ECM."

@@ -9,7 +9,7 @@ export default function ExperienceCompany({
     period,
     stack,
     details,
-    achievements
+    achievements,
 }: ExperienceCompany) {
     return (
         <div className="ExperienceCompany" data-testid="ExperienceCompany">
@@ -37,13 +37,12 @@ export default function ExperienceCompany({
                     <div className="is-color-cyan">Details</div>
                     {details}
                 </div>
-                {
-                    achievements &&
+                {achievements && (
                     <div>
                         <div className="is-color-cyan">Achievements</div>
                         {achievements}
                     </div>
-                }
+                )}
             </div>
         </div>
     );
@@ -56,5 +55,9 @@ interface ExperienceCompany {
     period: string;
     stack: string;
     details: JSX.Element;
-    achievements?: JSX.Element;
+    achievements?: JSX.Element | undefined;
 }
+
+ExperienceCompany.defaultProps = {
+    achievements: false,
+};

@@ -3,10 +3,11 @@ import ExperienceCompany from './ExperienceCompany';
 import vttLogo from './logos/vtt.svg';
 
 export default function ExperienceCompanyVTT() {
+    const company = 'VTT';
     return (
         <ExperienceCompany
-            company="VTT"
-            logo={<img src={vttLogo} />}
+            company={company}
+            logo={<img src={vttLogo} alt={`${company} logo`} />}
             position="Founder"
             period="Mar 2002 - Dec 2005"
             stack="Javascript, HTML, CSS."
