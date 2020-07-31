@@ -3,7 +3,7 @@ import ExperienceCompany from './ExperienceCompany';
 import flowableLogo from './logos/flowable.svg';
 
 export default function ExperienceCompanyFlowable() {
-    const company = 'FLowable AG';
+    const company = 'Flowable AG';
     return (
         <ExperienceCompany
             company={company}
