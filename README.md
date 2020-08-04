@@ -41,7 +41,8 @@ The workflow runs as follow:
 
 1. Run linting, Testing and TypeScript checks first, trying to parallelise some of the steps for performance reasons.
 2. If everything is OK, then deploy the changes to a UAT environment ([https://portfolio.rmallols.now.sh/](https://portfolio.rmallols.now.sh/)).
-3. If the changes apply to the master branch, request manual acceptance before deploying the changes to the PRD environment ([https://mallols.dev](https://mallols.dev)).
+3. If the changes apply to the master branch, request manual acceptance.
+4. Once the changes are approved, the version is dumped and they are deployed to the PRD environment ([https://mallols.dev](https://mallols.dev)).
 
 ![CI workflow](./readme-pictures/ci-workflow.png)
 
