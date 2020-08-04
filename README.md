@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ricardo Mallols portfolio
 
-## Available Scripts
+![Home page](./readme-pictures/home.png)
 
-In the project directory, you can run:
+Hi! I recently decided to upgrade my portfolio, and so I wanted to share it with the community
+in case anybody is interested on using it as a template.
 
-### `yarn start`
+**Live version**: [https://mallols.dev](https://mallols.dev)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Stack
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I've followed a mobile-first approach, based on a modern stack that incorporates some of the most popular technologies these days.
+The project runs on top of [Create React App](https://github.com/facebook/create-react-app),
+the official app bootstrapping tool offered by Facebook. 
 
-### `yarn test`
+* HTML
+* CSS
+* Sass
+* JavaScript
+* ReactJs
+* TypeScript
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The setup is quite standard. Simply checkout the repo, install the dependencies with `npm install` and start the server with `npm start`.
 
-### `yarn build`
+## Testing
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Even though the test coverage isn't any impressive at all, at least the project incorporates most of layers testing of the testing pyramid, for reference purposes:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Linting with [ESLint](https://eslint.org/) (`npm run lint`).
+* Unit & component testsing with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/) (`npm run test:unit`).
+* End to End testing with [Cypress](https://www.cypress.io/) (`npm run test:e2e:local`).
+* Visual Regression Testing with [BackStopJS](https://github.com/garris/BackstopJS) (`npm run test:visual:test`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Visual Regression testing](./readme-pictures/visual-testing.png)
 
-### `yarn eject`
+## CI
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project integrates with [CircleCI](https://circleci.com/) to ensuring the tests run smoothly before deploying the changes to [Vercel](https://vercel.com/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The workflow runs as follow:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Run linting, Testing and TypeScript checks first, trying to parallelise some of the steps for performance reasons.
+2. If everything is OK, then deploy the changes to a UAT environment ([https://portfolio.rmallols.now.sh/](https://portfolio.rmallols.now.sh/)).
+3. If the changes apply to the master branch, request manual acceptance before deploying the changes to the PRD environment ([https://mallols.dev](https://mallols.dev)).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![CI workflow](./readme-pictures/ci-workflow.png)
 
-## Learn More
+## Known issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. [ESLint doesn't run in watch mode locally](https://github.com/facebook/create-react-app/issues/8683).
+2. Visual Regression Testing runs fine locally, but it doesn't on CircleCI. That's because the [official Orb](https://circleci.com/orbs/registry/orb/reload/backstop) runs btoh the "Generate" and "Test" tasks sequentially - but we'd only want to run the latter!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Questions
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Feel free to drop me a message at [hi@mallols.dev](mailto:hi@mallols.dev)
