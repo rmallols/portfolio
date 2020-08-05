@@ -54,3 +54,7 @@ The workflow runs as follow:
 ## Questions
 
 Feel free to drop me a message at [hi@mallols.dev](mailto:hi@mallols.dev)
+
+## License
+
+This project is [MIT licensed](./LICENSE).
