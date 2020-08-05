@@ -17,7 +17,7 @@ the official app bootstrapping tool offered by Facebook.
 * CSS
 * Sass
 * JavaScript
-* ReactJs
+* React
 * TypeScript
 
 The setup is quite standard. Simply checkout the repo, install the dependencies with `npm install` and start the server with `npm start`.
@@ -27,7 +27,7 @@ The setup is quite standard. Simply checkout the repo, install the dependencies 
 Even though the test coverage isn't any impressive at all, at least the project incorporates most of layers testing of the testing pyramid, for reference purposes:
 
 * Linting with [ESLint](https://eslint.org/) (`npm run lint`).
-* Unit & component testsing with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/) (`npm run test:unit`).
+* Unit & component testing with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/) (`npm run test:unit`).
 * End to End testing with [Cypress](https://www.cypress.io/) (`npm run test:e2e:local`).
 * Visual Regression Testing with [BackStopJS](https://github.com/garris/BackstopJS) (`npm run test:visual:test`).
 
