@@ -10,7 +10,6 @@ describe('Home component', () => {
         // given
         const { getByTestId } = render(<Home />);
 
-
         // when
         const titleElement = getByTestId('Home-title');
 

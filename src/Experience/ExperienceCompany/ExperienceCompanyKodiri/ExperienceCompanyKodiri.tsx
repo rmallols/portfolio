@@ -9,7 +9,7 @@ export default function ExperienceCompanyKodiri() {
             logo={<ExperienceCompanyKodiriLogo />}
             position="Founder"
             period="Apr 2018 - current"
-            stack="HTML5, CSS3, Less, JavaScript/ES6+, React, NodeJs, Express, MongoDB, AWS, CircleCI."
+            stack="HTML5, CSS3, Less, JavaScript/ES6+, TypeScript, React, NodeJs, Express, MongoDB, AWS, CircleCI."
             details={
                 <>
                     <p>
