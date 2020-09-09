@@ -7,7 +7,7 @@ export default function ExperienceCompanyKodiri() {
         <ExperienceCompany
             company="Kodiri"
             logo={<ExperienceCompanyKodiriLogo />}
-            position="Founder"
+            position="Senior Software Developer"
             period="Apr 2018 - current"
             stack="HTML5, CSS3, Less, JavaScript/ES6+, TypeScript, React, NodeJs, Express, MongoDB, AWS, CircleCI."
             details={

@@ -35,6 +35,13 @@ export default function AboutMe() {
                 </label>{' '}
                 with their coding skills.
             </p>
+            <p>
+                I have a degree in&nbsp;
+                <label className="is-color-yellow">
+                    Computer Science
+                </label>{' '}
+                by the Polytechnic University of Valencia, Spain (2002-2007, 5 year plan).
+            </p>
         </div>
     );
 }

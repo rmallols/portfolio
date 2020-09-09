@@ -15,8 +15,8 @@ export default function ExperienceCompanyHSBC() {
                 <>
                     <p>
                         Created the modular architecture and further development
-                        for the new mobile trading app of the bank. Introduced
-                        modern development patterns with ES6+, offering other
+                        for the new FX Trading Platform of the bank (mobile and desktop). 
+                        Introduced modern development patterns with ES6+, offering other
                         Agile teams freedom to decide the best technology for
                         each scenario, based on their requirements (Angular4,
                         React, Vue2).
