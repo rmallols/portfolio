@@ -10,7 +10,7 @@ export default function ExperienceCompanySky() {
             logo={<img src={skyLogo} alt={`${company} logo`} />}
             position="Senior Software Developer"
             period="May 2014 - Feb 2016"
-            stack="Javascript, Angular, jQuery, HTML5, CSS3, SASS, Groovy, Jasmine, Karma, Sinon, Grunt, Bower, Jenkins."
+            stack="Javascript, Angular, React, jQuery, HTML5, CSS3, SASS, NodeJs, Express, Groovy, Jasmine, Karma, Sinon, Grunt, Bower, Jenkins."
             details={
                 <>
                     <p>

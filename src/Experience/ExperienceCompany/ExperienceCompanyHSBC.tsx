@@ -10,7 +10,7 @@ export default function ExperienceCompanyHSBC() {
             logo={<img src={hsbcLogo} alt={`${company} logo`} />}
             position="Senior Software Developer"
             period="Apr 2016 - Apr 2018"
-            stack="Javascript/ES6+, Angular4, React, Vue2, TypeScript, Rx, Jasmine, Karma, Protractor."
+            stack="Javascript/ES6+, Angular4, React, Vue2, TypeScript, Rx, NodeJs, Express, Jasmine, Karma, Protractor."
             details={
                 <>
                     <p>
