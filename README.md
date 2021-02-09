@@ -1,4 +1,4 @@
-# Ricardo Mallols portfolio
+# Richard Mallols portfolio
 
 ![Home page](./readme-pictures/home.png)
 

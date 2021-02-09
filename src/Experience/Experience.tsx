@@ -1,4 +1,5 @@
 import React from 'react';
+import ExperienceCompanyPartnersCapital from './ExperienceCompany/ExperienceCompanyPartnersCapital';
 import ExperienceCompanyKodiri from './ExperienceCompany/ExperienceCompanyKodiri/ExperienceCompanyKodiri';
 import ExperienceCompanyHSBC from './ExperienceCompany/ExperienceCompanyHSBC';
 import ExperienceCompanySky from './ExperienceCompany/ExperienceCompanySky';
@@ -11,6 +12,7 @@ import ExperienceCompanyVTT from './ExperienceCompany/ExperienceCompanyVTT';
 export default function Experience() {
     return (
         <div className="companiesWrapper">
+            <ExperienceCompanyPartnersCapital />
             <ExperienceCompanyKodiri />
             <ExperienceCompanyHSBC />
             <ExperienceCompanySky />
