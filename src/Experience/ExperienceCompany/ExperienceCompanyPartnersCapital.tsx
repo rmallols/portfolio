@@ -14,19 +14,19 @@ export default function ExperienceCompanyPartnersCapital() {
             details={
                 <>
                     <p>
-                        Built the Portfolio & Risk Management System, 
-                        implementing new functionalities and improving 
-                        the overall performance of the platform.
+                        Built the Portfolio & Risk Management System,
+                        implementing new functionalities and improving the
+                        overall performance of the platform.
                     </p>
                 </>
             }
             achievements={
                 <p>
-                    Reduced loading times on development platforms 
-                    by 90%+ (From ~45s to ~4s).
+                    Reduced loading times on development platforms by 90%+ (From
+                    ~45s to ~4s).
                     <br />
-                    Introduced regular workshops about JavaScript 
-                    architecture and best coding practises.
+                    Introduced regular workshops about JavaScript architecture
+                    and best coding practises.
                 </p>
             }
         />

@@ -17,7 +17,7 @@ describe('Experience component', () => {
         const titleElements = getAllByTestId('ExperienceCompany-title');
 
         // then
-        expect(titleElements).toHaveLength(8);
+        expect(titleElements).toHaveLength(9);
 
         // and
         titleElements.forEach((titleElement, index) => {
