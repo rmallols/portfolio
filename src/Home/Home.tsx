@@ -4,7 +4,7 @@ import Code from '../shared/Code/Code';
 export default function Home() {
     const getCode = () => `describe('devDetails function', () => {
 
-    it('fetches some details about R. Mallols,', () => {
+    it('fetches some details about the dev', async () => {
 
         // given
         const devDetails = { id: 'rmallols' };
@@ -12,7 +12,7 @@ export default function Home() {
         // when
         const { 
             loves, learning, favAnimal 
-        } = getDevDetails(devDetails);
+        } = await getDevDetails(devDetails);
 
         // then
         expect(loves).toBe('React');
