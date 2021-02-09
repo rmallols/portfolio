@@ -9,8 +9,8 @@ describe('Experience component', () => {
         // given
         const { getAllByTestId } = render(<Experience />);
         const companies = [
-            'Kodiri', 'HSBC', 'Sky TV', 'Flowable AG', 'Mimacom AG',
-            'Grupo Palluc', 'Grupo Ever Group', 'VTT'
+            'Partners Capital', 'Kodiri', 'HSBC', 'Sky TV', 'Flowable AG',
+            'Mimacom AG', 'Grupo Palluc', 'Grupo Ever Group', 'VTT'
         ];
 
         // when
