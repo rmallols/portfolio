@@ -33,7 +33,7 @@ context('Navigation', () => {
         text: 'Experience',
         path: '/experience',
         getSelector: () => get('ExperienceCompany').eq(0),
-        contains: 'Kodiri'
+        contains: 'Partners Capital'
     }, {
         text: 'Community',
         path: '/community',

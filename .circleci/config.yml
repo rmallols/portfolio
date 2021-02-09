@@ -51,7 +51,7 @@ jobs:
       - run:
             name: Bump version
             command: |
-                git config user.name "Ricardo Mallols"
+                git config user.name "Charo Mallols"
                 git config user.email "ricardo.mallols@gmail.com"
                 git pull --rebase
                 npm version patch -m "Bump version [ci skip]"
@@ -63,6 +63,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            # Generate tokens at https://vercel.com/account/tokens
             - run: ./node_modules/.bin/vercel -c -t ${NOW_TOKEN}
   deploy-to-prd:
     executor:
